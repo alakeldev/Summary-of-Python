@@ -384,3 +384,70 @@ i = "ALakel"
 print(i.lower())   #alakel
 """
 
+"""
+Strings Methods part 2
+
+
+- split(seprator, max-split)  
+a = "I love Python and Javascript"
+print(a.split())   # ['I', 'Love', 'Python', 'and', 'Javascript']     and it is a list by default seprator = space will be cut it
+
+b = "I-Love-Python-and-Javascript"
+print(b.split("-"))  # ['I', 'Love', 'Python', 'and', 'Javascript']     and it is a list the seprator = - will be cut it
+
+
+c = "I-Love-Python-and-Javascript"
+print(c.split("-", 2))  #['I', 'Love', 'Python-and-Javascript']    and it's a list the seperator is - and i want only 2 split then the rest will be in one element
+
+print(c.split("-", 3))  #['I', 'Love', 'Python', 'and-Javascript'] 
+
+- rsplit()
+it's same of split but it will start from the right you can show in the below example:
+c = "I-Love-Python-and-Javascript"
+print(c.rsplit("-", 2))  #['I-Love-Python' ,'and', 'Javascript']
+
+print(c.rsplit("-", 3))  #['I-Love' 'Python' ,'and', 'Javascript']
+
+
+
+
+
+- center() it needs how many characters you want to return overall include the character of variable / the character that you want to add
+
+e = "Samia"
+print(e.center(9))   // spaces         Samia          
+print(e.center(9, "#"))  // # Hashes    ##Samia##
+print(e.center(15, "@"))  // @          @@@@@Samia@@@@@
+
+
+
+- count("the word that i want to make search on it", "start index", "end index") it will return how many times the string available inside this variable
+f = "I Love Python and Javascript because Javascript is easy"
+print(f.count("Javascript"))    // 2   
+print(f.count("Javascript", 0, 28 ))    // 1   
+
+
+
+
+- swapcase()
+it will swap letter from capital to lower and from lower to capital 
+g = "I Love Python"   # i lOVE pYTHON
+h = "i lOVE pYTHON"     # I Love Python
+
+
+- startswith("the word/letter that i want to make search on it""start index", "end index")
+
+i = "I Love Python"
+print(i.startswith("I"))   # True
+print(i.startswith("M"))   # False
+print(i.startswith("P", 7, 12))   # True
+
+
+- endswith("the word/letter that i want to make search on it""start index", "end index") always ends not icluded be attention 
+
+i = "I Love Python"
+print(i.endswith("n"))   # True
+print(i.endswith("S"))   # False
+print(i.endswith("e", 2, 6))   # True
+
+"""
