@@ -100,10 +100,287 @@ print(type(1.9556656656))   # float => floating point number
 print(type("Alakel"))    # str => String
 
 
-print(type( [1, 2, 3, 4, 5] ))    # list => List
+print(type( [1, 2, 3, 4, 5] ))    # list => List       in other Programming language known as Array
 
 print(type( (1, 2, 3, 4, 5) ))    # tuple => tuple
 
 print(type({"One" : 1 , "Two": 2, "Three": 3}))   # dict => Dictionary
 
 print(type(2 == 2)) # bool => Boolean
+
+
+"""
+Variables:
+- Just TO be Note That the Data is Stored Inside the Memory not inside the Variable, the Variable is only the label from this Data.
+
+Syntax => [Variable Name] [Assignment Operator] [Value]
+
+Example:
+myVariable = "My Value"
+print(myVariable)
+
+
+
+
+- Source Code: Original Code You Write It in Computer (Python, C#, Java....).
+- Translation: Converting Source Code Into Machine Language.
+- Compilation: Translate Code Before The Run Time.
+- Run-Time: The period App Take To Executing the Commands.
+- Interpreted: Code Translated on the Fly during Execution.
+
+
+Python is Dynamically typed language (because you can change the data in the run time without any issue)
+
+
+
+if you want to know python keywords (Reserved Words) you can use as per below:
+help("keywords")
+
+
+"""
+
+a, b, c = 2, 4, 6
+
+print(a)
+print(b)
+print(c)
+
+"""
+Escape Sequances Characters:
+
+\ b  => Back Space   
+
+\ newline  =>   print("Hello \ 
+                I'm \ 
+                Alakel")
+
+\ \ to print \ 
+
+\ ' or \ "   => Escape double or single qoutes  
+
+\ n it will make new line (Line feed)
+
+
+\ r (Carriage Return)
+
+
+\ t (Horizontal Tab)     // space but with tab button
+
+
+\ xhh (Hex Value of the Character)
+
+"""
+
+print("Hello\bWorld")    # HellWorld
+
+print("123456\rAbcd")    # Abcd56
+print("123456\rAbcde")    # Abcde6
+print("123456\rAbcdef")    # Abcdef
+
+
+
+print("Hello\tWorld")    # Hello   World
+
+print("\x41\x72")
+
+
+"""
+Concatenation:  Connect Two strings or more to make Long one string
+
+- you Cannot Concatenate String With Number, it's only string with string
+
+"""
+
+msg = "My Name Is"
+name = "Abdullah Alakel"
+
+print(msg + " " + name)
+
+full_msg = msg + " " + name
+
+print(full_msg)
+
+
+#--------------------------------------------
+
+a = "First \
+Hey \
+Where"
+
+b = "Momo \
+Sasa \
+Lolo"
+
+print(a + "\n" + b)
+
+
+"""
+Strings:
+
+myName = "Abdullah Alakel"   double qoute
+myName1 = 'Abdullah Alakel'  single qoute
+
+your can use double qoute or single qoute, also u can use double qoute inside single or single inside double without using scape charater
+
+
+""" """ triple qoute it's using if you want your string to write it in more than one line and show the spaces and new lines without issues
+
+also u can use the single qoute and double qoute inside it to make some words special without any issues or using scape charater
+
+Example below
+"""
+
+myName = """Hello
+How 
+are You
+?"""
+
+print(myName)   #if you want to write the string in more than one line you need to use three or four or more lines for this string
+
+
+
+
+"""
+Strings Indexing and Slicing:
+
+*All Data in python is Object
+*Object contain Elemnts
+*Every element has its own Index
+*Python use Zero based Indexing
+*use square Brackets to Access Element
+*Enable Accessing parts of strings, tuple ,,, lists
+
+"""
+# Indexing (Access Single Item)
+
+myString = "I Am Alakel"
+print(myString[-3])   # k
+print(myString[0])    # I
+print(myString[2])    # A
+
+
+# Slicing (Access Multiple Squence Items )
+# [Start:End]    *****End Not Included
+# [Start:End:Steps]   ** the steps by default are 1
+
+print(myString[5:11])
+print(myString[:6])  # if the start not specified so it will start from 0 by default 
+print(myString[5:])  # if the end not specified so it will go to the end
+print(myString[:])  # it will print the full data
+
+
+print(myString[0::1])   ## it will print full data
+print(myString[::1])    ## it will print full data
+
+print(myString[::2])    ## it will take one and leave the next then take the next and leave the next..
+print(myString[::3])    ## it will take one and leave the two next then take the one and leave the two next....
+
+
+"""
+#  len()     it's a build in function return the count items inside specific container
+Example:
+a = "I Love Python"
+# print (len(a))    13  it's not indexing ,,,, the empty spaces it will count with len method
+
+Strings Methods:
+
+# String(), rstrip(), lstrip()
+
+this Methods to remove the spaces inside the string by default value or you can provide specific characters to remove from the string
+
+a = "     I Love Python      "
+print(a.strip())       # it will remove the spaces right and left
+print(a.rstrip())       # it will remove the spaces only on right side
+print(a.lstrip())       # it will remove the spaces only on left side
+
+
+
+
+a = "#####I Love Python######"
+print(a.strip("#"))       # it will remove the # right and left
+print(a.rstrip("#"))       # it will remove the # only on right side
+print(a.lstrip("#"))       # it will remove the # only on left side
+
+
+a = "@#@#@#@#I Love Python@#@#@#@#"
+print(a.strip("@#"))       # it will remove the @# right and left
+print(a.rstrip("@#"))       # it will remove the @# only on right side
+print(a.lstrip("@#"))       # it will remove the @# only on left side
+
+
+
+
+
+# title()
+transfer the string to title (it will make each first letter from each word capital letter and the letter after numbers capital too)
+
+b = "I love 2d Graphics and 3g Technology and python"
+
+print(b.title())    // I Love 2D Graphics And 3G Technology And Python
+
+
+
+
+# capitalize()
+transfer the string as each first letter from each words will make it capital letter 
+
+the difference between title and capitalize that the only first character will be capitalize and the rest is lower case
+
+
+print(b.capitalize())  // I love 2d graphics and 3g technology and python
+
+
+
+#zfill()   this method will tell that wants: width: and it's about how many zeroes want on the left
+
+01
+02
+03
+04
+010
+011
+012
+099
+100
+102
+102
+
+
+
+example: 
+c, d, e = "1", "11", "111"
+
+print(c)   # 1
+print(d)    #11
+print(e)    # 111
+
+print(c.zfill(3)) #001    
+print(d.zfill(3)) #011    
+print(e.zfill(3)) #111    
+
+
+
+c, d, e, f = "1", "11", "111", "1111"
+
+print(c)   # 1
+print(d)    #11
+print(e)    # 111
+print(f)    # 1111
+
+print(c.zfill(4)) #0001    
+print(d.zfill(4)) #0011    
+print(e.zfill(4)) #0111    
+print(f.zfill(4)) #1111    
+
+
+
+upper(), lower()
+
+g = "alakel"
+
+print(g.upper())   # ALAKEL
+
+i = "ALakel"
+print(i.lower())   #alakel
+"""
+
