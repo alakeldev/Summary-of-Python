@@ -33,7 +33,7 @@ What Can I Do With Python?
 - AI & Robots.
 - Automation(Testing and Automate specific task).
 - Web Scrapping (Harvest) Website to show last prices for coins ,gold, cypto.
-- Andriod Games (with Frameworks)
+- Andriod Games (with Frameworks).
 
 
 Some Apps Created With Python:
@@ -63,3 +63,47 @@ print("Hello Django")
 print("Hello Python"); print("Hello Django")
 
 
+
+"""
+Dealing with Data:
+in Each application we have:
+- Code
+- Data
+
+* The code is the lines you write to manage and deal with data.
+* Structure the Data we need to Categorize {Num, String, Boolean,.....}.
+
+* Data is stored on Computer Memory.
+* We use Variable to refer to this Data.
+* Variable Not Conatining the data. Its only refer to its Location Inside the memory.
+* Code is using the data to preform operation [Add, Edit, Delete, Update,....]
+
+"""
+
+"""
+All Data in Python is Object.
+
+type()    // it's build in function it will showing the type of this data
+
+"""
+
+print(type(10))   # int => Integer
+print(type(-10))   # int => Integer
+print(type(-103))   # int => Integer
+
+
+print(type(101.96))   # float => floating point number
+print(type(-101.96))   # float => floating point number
+print(type(1.9556656656))   # float => floating point number
+
+
+print(type("Alakel"))    # str => String
+
+
+print(type( [1, 2, 3, 4, 5] ))    # list => List
+
+print(type( (1, 2, 3, 4, 5) ))    # tuple => tuple
+
+print(type({"One" : 1 , "Two": 2, "Three": 3}))   # dict => Dictionary
+
+print(type(2 == 2)) # bool => Boolean
