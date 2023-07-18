@@ -585,3 +585,101 @@ print(",".join(myList)) # Abdullah,Khaled,Alakel
 print(type(",".join(myList)))  # string
 
 #"""
+
+
+# strings formatting    (OLD WAY) 
+
+name = "Abdullah"
+age = 25
+rank = 10
+
+print("My Name is: " + name)
+# print("My Name is: " + name + "and My Age is: " + age)  # type error
+print("My name Is %s" % name)
+print("My name Is %s and My Age is: %d" % (name, age))    # %s (placeholder string)   %d(plavegolder digit"number")
+print("My name Is %s and My Age is: %d and My Rank is: %f" % (name, age, rank)) # %s (placeholder string)   %d(placeholder => digit"number" 
+#  %f (placeholder => Floating point number))
+
+
+
+# another Example:
+n = "Alakel"
+l = "Python"
+y = 6 
+
+print("Iam %s I Love %s since %d years" % (n, l, y))
+
+
+# control the floating point number how many numbers after the ,
+myNumber = 10
+print("My Number is: %.2f" % myNumber)   # .2f it will show only two numbers after the ,
+
+
+# Truncate String cut from string things i want to delete from it and keep that i want:
+
+myLongString = "Hello People I love You All And I love Python too"
+print("Message is: %s" %myLongString) # Message is: Hello People I love You All And I love Python too
+print("Message is: %.5s" %myLongString) # Message is: Hello
+
+
+#------------------------------------------------------------------------------------------------------------
+
+
+# String Formatting    (New Ways to Learn)
+
+name = "Abdullah"
+age = 25
+rank = 10
+
+
+print("My name Is {}".format("Abdullah")) # .format("")
+print("My name Is {} and My Age is: {}".format(name, age))  # .format(variables)
+print("My name Is {:s} and My Age is: {:d} and My Rank is: {:f}".format(name, age, rank))  # {:s}   {:d}   {:f}
+print("My name Is {:s} and My Age is: {:d} and My Rank is: {:.2f}".format(name, age, rank))  # {:s}   {:d}   {:.2f}
+#  %f (placeholder => Floating point number))
+
+
+
+# Truncate String (new Ways to Learn)
+
+myLongString = "Hello People I love You All And I love Python too"
+print("Message is: {}".format(myLongString)) # Message is: Hello People I love You All And I love Python too
+print("Message is: {:.5s}".format(myLongString)) # Message is: Hello
+print("Message is: {:.12s}".format(myLongString)) # Message is: Hello People
+
+
+# Format Money
+
+myMoney = 5235400255122
+
+print("My Money In Bank Is: {:_d}".format(myMoney))
+print("My Money In Bank Is: {:,d}".format(myMoney))
+
+
+# Rearrange Items
+
+a, b, c = "One", "Two", "Three"
+
+print("Hello {} {} {}".format(a, b, c))   #Hello One Two Three
+print("Hello {1} {2} {0}".format(a, b, c))   #Hello Two Three One
+print("Hello {2} {0} {1}".format(a, b, c))   #Hello Three One Two
+
+
+x, y, z = 10, 20, 30
+print("Hello {} {} {}".format(x, y, z))     #Hello 10 20 30
+print("Hello {1:d} {2:d} {0:d}".format(x, y, z))    #Hello 20 30 10
+print("Hello {2:.2f} {0:.1f} {1:.4f}".format(x, y, z))   #Hello 30.00 10.0 20.0000
+
+
+
+
+# Format in Version 3.6 and above:  Very Important way to follow the formatting here similair to JS
+
+myName = "Alakel"
+myAge = 25
+
+print(f"My Name Is : {myName} and My Age is : {myAge}")
+
+
+# Please Visit Website :  pyformat.info   to check the format old and new ways in details 
+
