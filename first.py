@@ -835,6 +835,3 @@ print(myAwesomeList)
 
 
 # Lists Methods
-
-
-
