@@ -683,3 +683,106 @@ print(f"My Name Is : {myName} and My Age is : {myAge}")
 
 # Please Visit Website :  pyformat.info   to check the format old and new ways in details 
 
+#------------------------------------------------------------------------------------------------------------
+
+
+
+
+# Numbers
+
+
+# Integer:
+print(type(1))
+print(type(100))
+print(type(10))
+print(type(-10))
+print(type(-2021))
+print(type(0))
+
+
+# Float:
+print(type(1.500))
+print(type(10.99))
+print(type(-11.20))
+print(type(0.91))
+
+
+
+# Complex:
+print(type(5+6j))    # it contain two parts (real part, imaginary part)
+
+
+myComplexNumber = 5+6j
+
+print("Real Part Is: {}".format(myComplexNumber.real))   # // 5.0
+print("Real Part Is: {}".format(myComplexNumber.imag))   # // 6.0
+
+# You Can Convert From Int to Float or Complex
+# You Can Convert From Float to Int or Complex
+# You Can NOT Convert Complex To Any Type
+
+# Examples
+print(100)   #100
+print(float(100))   # 100.0
+print(complex(100))  #(100+0j)
+
+print(10.50)   # 10.5
+print(int(10.50)) # 10
+print(complex(10.50)) #(10.5+0j)
+
+
+print(10+9j)
+# print(int(10+9j))   # Error Cannot Convert Complex Number to Integer
+
+
+#------------------------------------------------------------------------------------------------------------
+
+#Arithmetic Operators
+
+# Addition
+print(20 + 20)   # 40
+print(10 + 10)   # 20
+print(1.1 + 2.3)   # 3.4
+
+
+# Subtraction
+print(60 - 30)    # 30
+print (-30 - 20)   # -50
+print (-30 - -20)  # -10
+print(5.66 - 3.44) # 2.22
+
+
+# Muliplication
+print(10 * 3)  # 30
+print(5 + 10 * 100)  # 1005
+print((5 + 10) * 100) # 1500
+
+
+# Division
+print(100 / 20) # 5.0
+print(int(100 / 20)) # 5
+
+
+
+# Modulus
+print(8 % 2) # 0
+print(9 % 2) # 1
+print(20 % 5) # 0
+print(22 % 5) # 2
+
+
+# Exponent
+print(2 ** 5)    # 32      (2 * 2 * 2 * 2 * 2)
+print(5 ** 4)    # 625        (5 * 5 * 5 * 5)
+
+
+# Floor Division
+
+print (100 // 20)   # 5
+print (110 // 20)   # 5
+print (119 // 20)   # 5
+print (120 // 20)   # 6
+print (130 // 20)   # 6
+print (139 // 20)   # 6
+print (140 // 20)   # 7
+
