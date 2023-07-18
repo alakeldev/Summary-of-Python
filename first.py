@@ -397,7 +397,8 @@ print(b.split("-"))  # ['I', 'Love', 'Python', 'and', 'Javascript']     and it i
 
 
 c = "I-Love-Python-and-Javascript"
-print(c.split("-", 2))  #['I', 'Love', 'Python-and-Javascript']    and it's a list the seperator is - and i want only 2 split then the rest will be in one element
+print(c.split("-", 2))  #['I', 'Love', 'Python-and-Javascript']    and it's a list the seperator is - and i want only 2 split then
+the rest will be in one element
 
 print(c.split("-", 3))  #['I', 'Love', 'Python', 'and-Javascript'] 
 
@@ -421,7 +422,8 @@ print(e.center(15, "@"))  // @          @@@@@Samia@@@@@
 
 
 
-- count("the word that i want to make search on it", "start index", "end index") it will return how many times the string available inside this variable
+- count("the word that i want to make search on it", "start index", "end index") it will return how many times the string 
+available inside this variable
 f = "I Love Python and Javascript because Javascript is easy"
 print(f.count("Javascript"))    // 2   
 print(f.count("Javascript", 0, 28 ))    // 1   
@@ -450,4 +452,136 @@ print(i.endswith("n"))   # True
 print(i.endswith("S"))   # False
 print(i.endswith("e", 2, 6))   # True
 
-"""
+
+
+
+
+- index()
+
+a= "I Love Python"
+print(a.index(substring that wants to search for, start, end))
+
+print(a.index("P"))  # index number 7
+print(a.index("P", 0, 10)   # index number 7
+print(a.index("P", 0, 5)   # Error substring not found (will stop the code)
+
+
+- find(substring that wants to search for, start, end)
+
+the difference between find and index ,,,, the find method will return -1 if no find the value but the index will return error 
+and stop the code
+
+c= "I Love Python"
+print(c.find("P"))  # index number 7
+print(c.find("P", 0, 10)   # index number 7
+print(c.find("P", 0, 5)   # -1
+
+
+
+
+
+- rjust(width, fill char)   , ljust(width, fill char)
+
+c = "Alakel"
+print(c.rjust(10))      //       Alakel
+print(c.rjust(10, "@"))  // @@@@Alakel
+
+c = "Alakel"
+print(c.ljust(10))      //Alakel    
+print(c.ljust(10, "@"))  //Alake@@@@
+
+
+
+
+- splitlines()  return all lines inside list
+
+# e = """ #First line
+#Second Line
+#Third Line """ 
+
+# print(e.splilines())    // ['First Line', 'Second Line', 'Third Line']
+# print(type(e.splilines()))    // list
+
+
+# another way to return list from long string:
+
+# f = "First Line\nSecond Line\nThird Line"
+#print(f.splitlines())    // ['First Line', 'Second Line', 'Third Line']
+
+
+
+
+
+# expandtabs(number of tabes you want (tabe button))
+
+g = "Hello\tWorl\tI\tLove\tPython"
+print(g)
+
+print(g.expandtabs(10))
+
+
+
+one = "I Love Python And 3G"
+
+print(one.istitle())    #True, each first letter in each word capital letter and after the number capital letter
+
+two = "I Love Python And 3g"   
+print(two.istitle())       # False, because the letter after number is small letter
+
+
+
+three = " "  
+print(three.isspace())   # True
+
+four = "i love python"
+five = "I Love Python"
+
+print(four.islower())  # True
+print(five.islower())   # False
+
+
+seven = "Abdullah Alakel"
+eight = "Abdullah Alakel100"
+nine = "Abdullah--Alakel100"
+print(seven.isidentifier())   # True
+print(eight.isidentifier())     # True
+print(nine.isidentifier())      # False because no - inside Identifier
+
+
+x = "AaaaaBbbbbb"
+print(x.isalpha())     # True  because the value is from Aa to Zz
+
+y = "AaaaaBbbbbb11"
+print(y.isalpha())  # False because of the number inside the value
+
+
+
+
+u = "AaaaaBbbbbb"
+print(u.isalnum())     # True  because the value is from Aa to Zz and all number 0 to 9
+
+z = "AaaaaBbbbbb11"
+print(z.isalnum())  # True because  because the value is from Aa to Zz and all number 0 to 9
+
+
+
+
+
+# - replace(old value, new value, count to say how many times we want to replace it)
+
+u = "Hello One Two Three One One"
+
+print(u.replace("One", "1"))      # Hello 1 Two Three 1 1
+print(u.replace("One", "1", 1))   # Hello 1 Two Three One One
+
+
+
+# - join(Iterable on object) to make loop on it 
+
+myList = ["Abdullah", "Khaled", "Alakel"]
+print("-".join(myList))  # Abdullah-Khaled-Alakel
+print(" ".join(myList)) # Abdullah Khaled Alakel
+print(",".join(myList)) # Abdullah,Khaled,Alakel
+print(type(",".join(myList)))  # string
+
+#"""
