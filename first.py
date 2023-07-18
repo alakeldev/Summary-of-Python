@@ -786,3 +786,55 @@ print (130 // 20)   # 6
 print (139 // 20)   # 6
 print (140 // 20)   # 7
 
+
+
+#------------------------------------------------------------------------------------------------------------
+
+# Intro to Lists:
+
+# Lists it's same array in other programming languages but it's not array because if you want array u must import modul to use the array in py
+
+# - List items are enclosed in square brackets
+# - List items are ordered, to use index to access item
+# - List items are Mutable (Add - Delete - Edit)
+# - List items is not unique
+# - List can have Different Data Types
+
+
+myAwesomeList = ["One", "Two", "One", 1, 100.5, True]
+
+print(myAwesomeList)   # ['One', 'Two', 'One', 1, 100.5, True]
+print(myAwesomeList[1])  # Two
+print(type(myAwesomeList[1]))  # string
+print(myAwesomeList[-1])  # True
+print(myAwesomeList[-3])    # 1
+
+
+print(myAwesomeList[1:4])   # ["Two", "One", 1]                 # Ends not Included
+print(myAwesomeList[:4])    # if start empty it will start from index 0    # ['One', 'Two', 'One', 1]
+print(myAwesomeList[1:])    # if end empty it will continue to the last    # ['Two', 'One', 1, 100.5, True]
+
+
+print(myAwesomeList[::1])  # it will show the full list because the step is default
+print(myAwesomeList[::2])  # it will take element and leave the next then take one and leave the next
+
+
+# print(myAwesomeList[150])    # List index out of range
+
+print(myAwesomeList)
+
+myAwesomeList[1] = 2        # edit on my original list
+myAwesomeList[-1] = False    # edit on my original list
+# myAwesomeList[0:2] =  []     # here no items available it's empty
+# myAwesomeList[0:3] =  []     # here no items available it's empty
+# myAwesomeList[0:3] =  ["A", "B", "C"]     # add new values inside the list   # ['A', 'B', 'C', 1, 100.5, False]
+myAwesomeList[0:3] =  ["A"]     #['A', 1, 100.5, False]     # remove three items and put instead of them only one item without any issues
+print(myAwesomeList)
+
+
+
+
+# Lists Methods
+
+
+
