@@ -1084,3 +1084,120 @@ print(n)
 
 #------------------------------------------------------------------------------------------------------------
 
+# Set  Intro:
+
+# 1- Set Items are Enclosed in Curly Braces    ex: mySet = {}
+# 2- Set Items are NOT ordered and Not Indexed
+
+
+mySetOne = {"Alakel", "Abdullah", 100}
+print(mySetOne)
+
+# print(mySetOne[1])   # Error
+# 3- Set Indexing and Slicing can NOT be Done
+
+mySetTwo = {1, 2, 3, 4, 5, 6}
+# print(mySetTwo[0:2])   # Error
+
+
+# 4- Set Has Only Immutable Data Types (Numbers, Strings , Tuples) List and Dict are NOT
+
+# mySetThree = {"Abdullah", 10, 10.5, True, [1, 2, 3]}  # The issue because of the list inside the set
+# print(mySetThree)    #ERROR unhashable type (hashing mechanism in computer science allow to search on objects inside computer memory)
+
+mySetFour = {"Abdullah", 10, 10.5, True,(1, 2, 3)}   # here everthing is ok because of using tuple instead of list
+
+print(mySetFour) 
+
+
+
+# 5- Set items are UNIQUE
+
+mySetFive = {1, 2, "Alakel", "Alakel", 1, "Abdullah"}
+print(mySetFive)  # {'Alakel', 1, 2, 'Abdullah'}  the items repeated will ignored and will show it only one time what ever times repeated
+
+
+
+
+
+# Set Methods:
+
+# clear()     it will remove all elements from the set
+
+a = {1, 2, 3}
+a.clear()
+print(a)
+
+
+# union()     it make union with two sets and more
+
+b = {"One", "Two", "Three"}
+c = {"1", "2", "3"}
+x = {"WeWe", "FeFe"}
+print(b | c)
+print(b.union(c, x))
+
+
+# add()   it will add element to the set - it will accept one argument only
+
+d = {1, 2, 3, 4}
+
+d.add(5)
+d.add(6)
+print(d)
+
+
+# copy()    Shallow Copy
+
+e = {1, 2, 3, 4}
+f = e.copy()
+
+print(e)  # {1, 2, 3, 4}
+print(f)  # {1, 2, 3, 4}
+
+e.add(6)
+
+print(e) #{1, 2, 3, 4, 6}
+print(f) #{1, 2, 3, 4}
+
+
+
+# remove()    it will remove element from the set
+
+g = {1, 2, 3, 4}
+g.remove(1)
+
+print(g)   #{2, 3, 4}
+
+# g.remove(7)   # ERROR the keyerror because element not found inside the set
+
+
+
+# discard()   the different between remove and discard if we give element not inside the set it will not return an Error same remove method
+
+h = {1, 2, 3, 4}
+h.discard(1)
+
+print(h)   #{2, 3, 4}
+
+h.discard(7)   # It will not return ERROR even the element not inside the set items
+
+
+
+# pop()
+
+i = {"A", True, 1, 2, 3, 4, 5}
+print(i.pop())   # it will return random element from the set
+
+
+
+
+# update()    update the set with the union of itself and others
+
+j = {1, 2, 3}
+k = {1, "A", "B", 2}
+
+j.update(["HTML", "CSS", "JS"])    # update the j set with list
+j.update(k)         # update the j set with other set k 
+
+print(j)  # {1, 2, 3, 'B', 'CSS', 'A', 'HTML', 'JS'}   it will ignore the repeat items and will take them only one time
