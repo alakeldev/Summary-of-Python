@@ -965,3 +965,122 @@ g = [1, 2, 3, 4, 5, "A", "B"]
 # print(g.pop(2))   # 3
 # print(g.pop(-1))   # B
 # print(g.pop(-3))   # 5
+
+
+#------------------------------------------------------------------------------------------------------------
+
+# Tuple Intro:
+
+# 1- Tuple items are enclosed in parentheses           ex: myTuple = ("Abdullah", "Alakel")
+# 2- You can remove the parentheses if you want        ex : myTuple = "Abdullah", "Alakel"
+# 3- Tuple are ordered, you can use index to access the items    
+
+myTuple = (1, 2, 3, 4, 5)
+print(myTuple[-1])
+
+# 4- Tuple are Immutable => You Can NOT Add or Delete
+
+# myNewTuple = (1, 2, 3, 4, 5)
+
+# myNewTuple[2] = "Three"
+
+# print(myNewTuple)   # Error Tuple does not support item assignment
+
+# 5- Tuple items is not Unique    (Same List)
+# 6- Tuple can have different data types
+
+myNewTuple = ("Alakel", "Alakel", 1, 2, 3, 10.3, True)
+
+print(myNewTuple[1])
+print(myNewTuple[-1])
+
+
+# 7- Operators used in strings and lists available in tuples too
+
+
+
+# Tuple Methods:
+
+# tuple with one Element how we can say this is a tuple with one element Example:
+
+myTuple1 = ("Alakel",)
+myTuple2 = "Alakel",
+
+print(myTuple1)
+print(myTuple2)
+print(type(myTuple1))   # tuple
+print(type(myTuple2))   # tuple
+print(len(myTuple1))   # 1
+print(len(myTuple2))   # 1
+
+
+
+
+# Tuple Concatenation
+
+a = (1, 2, 3, 4)
+b = (5, 6)
+
+c = a + ("A", "B", True) + b 
+
+print(c)   # (1, 2, 3, 4, 'A', 'B', True, 5, 6)
+
+
+
+
+# Tuple, List , String Repeat *
+
+myString = "Alakel"
+myList = [1, 2]
+myTuple = ("A", "B")
+
+print(myString * 6)   # AlakelAlakelAlakelAlakelAlakelAlakel
+print(myList * 6)   # [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+print(myTuple * 6)  # ('A', 'B', 'A', 'B', 'A', 'B', 'A', 'B', 'A', 'B', 'A', 'B')
+
+
+
+# Methods:
+
+# count()   to check the element how many times repeat inside the tuple
+
+a = (1, 3, 7, 8, 2, 6 ,5 , 8)
+
+print(a.count(8))   # 2   
+
+
+# index()
+
+b = (1, 3, 7, 8, 2, 6 , 5)
+
+print("The Position Of Index Is: {:d}".format(b.index(8)))   # 3
+print(f"The Position of Index Is: {b.index(8)}")   # 3
+
+
+
+# Tuple Destruct
+
+a = ("A", "B", "C")
+
+x, y, z = a   
+
+print(x)   #A
+print(y)    #B
+print(z)    #C
+
+
+# another Example:
+b = ("F", "G", 4, "D")
+
+# t, m ,n = b    // Too many Values to unpack Error
+
+# if you want to escape one value inside the tupe you follow as per below and skip with _
+
+t, m, _, n = b
+
+print(t)
+print(m)
+print(n)
+
+#------------------------------------------------------------------------------------------------------------
+
