@@ -1286,3 +1286,50 @@ k.symmetric_difference_update(l)
 print(k)   # {'Abdullah', 3, 5, 'X', 'Alakel'}
 
 
+print("-------------------------------------------------")
+
+
+# Special set Methods that return True Or False (Boolean value)
+
+
+# issuperset()
+
+a = {1, 2, 3, 4}
+b = {1, 2, 3}
+c = {1, 2, 3, 4, 5}
+
+print(a.issuperset(b))  # True why? because it will check the elements inside b if all b set elements same inside a set 
+# so it will return True 
+
+print(a.issuperset(c)) # False why? becuase it will check on all elements in c set if all c set elements are not same a set element 
+# so it will return False
+
+
+print("-------------------------------------------------")
+
+
+# issubset()
+
+d = {1, 2, 3, 4}
+e = {1, 2, 3}
+
+f = {1, 2, 3, 4, 5}
+
+print(d.issubset(e))  # False why? becuase it wil check on d set if all elements are same inside e set element so it will return True
+
+print(d.issubset(f)) # True why? because it will check on d set if all elements are same inside f set elements so it will return True 
+
+
+
+print("-------------------------------------------------")
+
+
+# isdisjoint()
+
+g = {1, 2, 3, 4}
+h = {1, 2, 3}
+i = {10, 11, 12}
+
+print(g.isdisjoint(h))  # False becuase both sets are have 1, 2, 3 
+
+print(g.isdisjoint(i))   # True becuase 10, 11, 12 are not inside the original set elements so they are disjoint 
