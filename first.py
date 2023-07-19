@@ -1201,3 +1201,88 @@ j.update(["HTML", "CSS", "JS"])    # update the j set with list
 j.update(k)         # update the j set with other set k 
 
 print(j)  # {1, 2, 3, 'B', 'CSS', 'A', 'HTML', 'JS'}   it will ignore the repeat items and will take them only one time
+
+
+
+
+# difference()  if you want to know the difference between two sets, it will appear/show the elements inside the first set and not available
+# inside the second set 
+
+a = {1, 2, 3, 4}
+b = {1, 2, "Alakel", "Abdullah"}
+
+print(a) # {1, 2, 3, 4}
+print(a.difference(b))  # {3, 4}
+
+# you can get same result from the difference method as per below
+print(a - b)   # {3, 4}
+
+
+
+# difference_update()   it will return the difference and it will update the original set with these difference values
+
+c = {1, 2, 3, 4}
+d = {1, 2, "Alakel", "Abdullah"}
+
+c.difference_update(d)   
+
+print(c)   # {3, 4}
+
+
+print("-------------------------------------------------")
+
+# intersection()  it will return the items that showing in both sets
+
+e = {1, 2, 3, 4, "X"}
+f = {"Alakel", "X", 2}
+
+print(e)   # {'X', 1, 2, 3, 4}
+
+print(e.intersection(f))     # {'X', 2}
+
+print(e)  # {'X', 1, 2, 3, 4}
+
+
+print("-------------------------------------------------")
+
+
+# intersection_update()   it will reitn the items that showing in both sets and it will update the original set with this value
+
+g = {1, 2, 3, 4,"Alakel", "X"}
+h = {"Alakel", "X", 2}
+
+print(g)    # {1, 'Alakel', 3, 2, 4, 'X'}
+g.intersection_update(h)                       # g & h
+print(g)    # {'Alakel', 2, 'X'}
+
+
+print("-------------------------------------------------")
+
+
+# symmertice_difference()     it will return the items that not showing in both sets
+
+i = {1, 2, 3, 4, 5, "X"}
+j = {"Alakel", "Abdullah", 1, 2, 4}
+
+print(i)    # {1, 2, 3, 4, 5, 'X'}
+
+print(i.symmetric_difference(j))   # i ^ j        # {'Abdullah', 3, 'Alakel', 5, 'X'}
+
+print(i)     # {1, 2, 3, 4, 5, 'X'}
+
+
+
+print("-------------------------------------------------")
+
+# symmertice_difference_update#()   it will return the items that not showing in both sets and update with this value the original set
+
+k = {1, 2, 3, 4, 5, "X"}
+l = {"Alakel", "Abdullah", 1, 2, 4}
+
+print(k)   # {1, 2, 3, 4, 5, 'X'}
+
+k.symmetric_difference_update(l)
+
+print(k)   # {'Abdullah', 3, 5, 'X', 'Alakel'}
+
+
