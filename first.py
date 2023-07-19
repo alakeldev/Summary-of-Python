@@ -835,3 +835,133 @@ print(myAwesomeList)
 
 
 # Lists Methods
+
+# - Append()     when you want to add new item or more to the list
+
+myFriends = ["Alakel", "Abdullah", "Sawaf"]
+myOldFriends = ["Ahmad", "Abode", "Sami"]
+myFriends.append("MaMa")
+myFriends.append(100)
+myFriends.append(152.112)
+myFriends.append(True)
+myFriends.append(myOldFriends)
+
+
+print(myFriends)
+print(myFriends[2])  # Sawaf
+print(myFriends[6]) # True
+print(myFriends[7]) # ['Ahmad', 'Abode', 'Sami']
+print(myFriends[7][1]) # Abode
+print(myFriends[7][2]) # Sami
+
+
+# - extend()         the different between append and extend, the extend can concatenate two list and extend the list example below:
+
+a = [1, 2, 3]
+b = ["a", "b", "c"]
+
+a.extend(b)
+
+print(a)    # [1, 2, 3, 'a', 'b', 'c']
+
+c = ["One", "Two"]
+
+a.extend(c)
+
+print(a)   # [1, 2, 3, 'a', 'b', 'c', 'One', 'Two']
+
+
+
+# - remove()      it will remove specific element fron your list
+
+y = [1, 2, 3, 4, 5, "Alakel", True, "Alakel", "Alakel"]
+
+y.remove("Alakel")
+
+print(y)   # [1, 2, 3, 4, 5, True, 'Alakel', 'Alakel']  it will remove the first item same "Alakel"will face it in its way and keep the rest
+
+
+
+# - sort()  it accepts numbers or letters (string) only without mixing
+# if you include string with numbers it will show an error so it's important to note that
+
+y = [1, 2, 100, 120, -10, 17, 29]
+
+y.sort()
+
+print(y)   # [-10, 1, 2, 17, 29, 100, 120]
+
+y.sort(reverse=True)
+
+print(y) #[120, 100, 29, 17, 2, 1, -10]
+
+
+
+# - reverse()    it accepts mixing between numbers and string because it's only reverse without sorting
+
+z = [10, 1, 9, 80, 100, "Alakel", 100]
+
+z.reverse()
+
+print(z)  # [100, 'Alakel', 100, 80, 9, 1, 10]
+
+
+
+# - clear()   it will clear the list (remove all items from the list)
+
+a = [1, 2, 3, 4]
+
+a.clear()
+print(a)    # []
+
+
+
+# - copy()   when you want to take a copy from the list then you don't care what happened/changed with the main 
+# list because ur copy will be the same   (Shallow Copy)
+
+b = [1, 2, 3, 4]
+
+c = b.copy()    # return Shallow copy
+
+print(b)    # main list    [1, 2, 3, 4]
+print(c)    # copied list  [1, 2, 3, 4]
+
+b.append(5)
+
+
+print(b)    # main list    [1, 2, 3, 4, 5]
+print(c)    # copied list  [1, 2, 3, 4]
+
+
+# - count()   it will count the element how many times show inside my list 
+
+d = [1, 2, 3, 4, 3, 9 , 10, 1 ,2 , 1]
+
+print(d.count(1))   # 3    the number one inside the list show three times
+
+
+# - index()   it will show the first index going to face with its way
+
+
+e = ["Alakel", "Abdullah", "Alakel", "Ahmad", "Abdulrahman", "Mama"]
+
+print(e.index("Alakel"))   # 0
+print(e.index("Abdullah"))   # 1
+# print(e.index("Sami"))   # Error is not in list
+
+
+# - insert((insert object before INDEX), Object)   
+
+f = [1, 2, 3, 4 ,5 , "A", "B"]
+f.insert(0, "Test")
+f.insert(-1, "FAFA")
+print(f)  # ['Test', 1, 2, 3, 4, 5, 'A', 'FAFA', 'B']
+
+
+# - pop()
+
+g = [1, 2, 3, 4, 5, "A", "B"]
+
+# print(g.pop(2))   # 3
+# print(g.pop(-1))   # B
+# print(g.pop(-3))   # 5
