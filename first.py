@@ -1333,3 +1333,233 @@ i = {10, 11, 12}
 print(g.isdisjoint(h))  # False becuase both sets are have 1, 2, 3 
 
 print(g.isdisjoint(i))   # True becuase 10, 11, 12 are not inside the original set elements so they are disjoint 
+
+print("-------------------------------------------------")
+
+
+#------------------------------------------------------------------------------------------------------------
+
+# Dictionary intro:
+
+# 1- Dict items are enclosed in curly braces
+# 2- Dict items are contains Key : Value
+# 3- Dict Key need to be Immutable => (Number, String, Tuple) List not Allowed
+# 4- Dict Value Can be any Data Type
+# 5- Dict Key Need To be Unique
+# 6- Dict Is not Ordered, You can access it element with its key
+user = {
+    "name": "Alakel",
+    "age": 25,
+    "country": "Syria",
+    (1, 2, 3, 4): "MyTuple",
+    1 : "Baby",
+    "skills" : ["HTML", "CSS", "Python"],
+    "rating": 10.2,
+    # "name": "Abdullah"  # it will update the key and take the last key with same name
+}
+
+print(user)
+
+print(user["country"])    #Syria
+print(user.get("country"))   #Syria
+
+print(user.keys())   # dict_keys(['name', 'age', 'country', (1, 2, 3, 4), 1, 'skills', 'rating'])
+print(user.values())   #dict_values(['Alakel', 25, 'Syria', 'MyTuple', 'Baby', ['HTML', 'CSS', 'Python'], 10.2])
+
+
+print("-------------------------------------------------")
+
+
+# Two-Dimentional Dictionary (Nested Dictionary)
+
+languages = {
+    "One": {
+        "name": "HTML",
+        "progress": "100%"
+    },
+    "Two": {
+        "name": "CSS",
+        "progress": "90%"
+    },
+    "Three": {
+        "name": "JS",
+        "progress": "90%"
+    }
+    }
+
+print(languages)
+
+print(languages["One"])   #{'name': 'HTML', 'progress': '100%'}
+print(languages["Three"])   #{'name': 'JS', 'progress': '90%'}
+
+print(languages["Three"]["progress"])    #90%
+print(languages["Three"]["name"])    #JS
+
+
+# Dictionary Length
+print(len(languages))   # 3   it means the languages dict has three elements
+print(len(languages["Two"]))   # 2  it means that Two dictionary how many elemnts has inside it
+
+
+
+# Create Dictionary From Variables
+
+frameworkOne = {
+    "name": "React.js",
+    "progress": "80%"
+}
+
+frameworkTwo = {
+    "name": "Angular",
+    "progress": "60%"
+}
+
+frameworkThree = {
+    "name": "Vuejs",
+    "progress": "90%"
+}
+
+allFramework = {
+    "One": frameworkOne,
+    "Two": frameworkTwo,
+    "Three": frameworkThree
+}
+
+print(allFramework)
+
+print("-------------------------------------------------")
+
+
+# Dictionary Methods:
+
+
+# - clear()   clear all elements inside the dictionary
+
+user = {
+    "name": "Alakel",
+    "age": 25
+}
+
+print(user)   #{'name': 'Alakel', 'age': 25}
+
+user.clear()
+
+print(user)   #{}
+
+print("-------------------------------------------------")
+
+
+# - update()   it allows to add new elements to ur dictionary 
+
+member = {
+    "name": "Alakel",
+    "age": 26
+}
+
+print(member)   # {'name': 'Alakel', 'age': 26}
+
+member["country"] = "Syria"
+
+print(member)   # {'name': 'Alakel', 'age': 26, 'country': 'Syria'}   # without using update() method
+
+
+member.update({"gender": "Male"})
+
+print(member)   # {'name': 'Alakel', 'age': 26, 'country': 'Syria', 'gender': 'Male'}   # with using update method
+
+
+
+
+# - copy()        Shallow Copy the new copy will not effect if you add or edit the original Dictionary
+
+main = {
+    "name": "Alakel"
+}
+
+b = main.copy()
+
+print(b)  # {'name': 'Alakel'}
+
+main.update({"country": "Germany"})
+
+print(main)   # {'name': 'Alakel', 'country': 'Germany'}
+print(b)   # {'name': 'Alakel'}
+
+
+
+# - keys() + values()
+
+
+print(main.keys())    # dict_keys(['name', 'country'])
+print(main.values())    # dict_values(['Alakel', 'Germany'])
+
+print("-------------------------------------------------")
+
+
+# - setdefault()
+
+user = {
+    "name": "Alakel",   
+}
+
+print(user)   # {'name': 'Alakel'}
+print(user.setdefault("name", "Abdullah")) # Alakel  it appears here alakel because it will search for the key name value inside the dict
+# if it finds the value or this key it will return it from the dict if not find it so it will set the new value "Abdullah" as a value to this key
+# also if you didn't provide a value so it will return a None data type   print(user.setdefault("age"))
+print(user)   # {'name': 'Alakel'}
+
+
+print("-------------------------------------------------")
+
+
+# - popitem()    it will return the last item added to the dictionary 
+
+member = {
+    "name" : "Alakel",
+    "skill": "PS4"
+}
+
+print(member)   # {'name': 'Alakel', 'skill': 'PS4'}
+print(member.popitem())   # ('skill', 'PS4')
+
+member.update({"age": 26})
+
+print(member.popitem())   # ('age', 26)
+
+
+
+print("-------------------------------------------------")
+
+
+# - items()   here the most main point that all future change on the dictionary will effect the items and it will show on it 
+
+view = {
+    "name": "Alakel",
+    "skill": "PS5"
+}
+
+allItems = view.items()
+
+print(view) # {'name': 'Alakel', 'skill': 'PS5'}
+
+view["age"] = 26
+
+print(allItems)    # dict_items([('name', 'Alakel'), ('skill', 'PS5'), ('age', 26)])    BIG LIST AND CONATIN TUPLES
+
+
+print("-------------------------------------------------")
+
+
+
+# fromkeys()    to make dictionary from keys and vlaues
+
+a = ("MyKeyOne", "MyKeyTwo", "MyKeyThree")
+
+b = "X"
+
+print(dict.fromkeys(a, b))   # {'MyKeyOne': 'X', 'MyKeyTwo': 'X', 'MyKeyThree': 'X'}    Dictionary
+
+print("-------------------------------------------------")
+
+
+#------------------------------------------------------------------------------------------------------------
