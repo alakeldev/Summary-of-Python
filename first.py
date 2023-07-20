@@ -1563,3 +1563,75 @@ print("-------------------------------------------------")
 
 
 #------------------------------------------------------------------------------------------------------------
+
+
+# Boolean
+
+# 1- In Programming you need to know if you code output is True or False
+# 2- Boolean Values are two constant Objects False or True
+
+name = " "
+print(name.isspace())  # True
+
+print(100 > 200)   # False
+
+print(100 > 100)    # False
+
+print(100 > 50)    # True
+
+print("-------------------------------------------------")
+
+
+# bool() build in function return True if the arguement is True value else False  Examples:
+
+
+# True Values
+print(bool("Alakel"))
+print(bool(100))
+print(bool(10.5))
+print(bool(True))
+print(bool([1, 2, 3, 4]))
+
+print("-------------------------------------------------")
+
+# False Values
+print(bool(""))
+print(bool(''))
+print(bool(0))
+print(bool([]))
+print(bool(()))
+print(bool({}))
+print(bool(False))
+print(bool(None))
+
+
+print("-------------------------------------------------")
+
+
+# Boolean Operators:
+# - and  
+
+age = 36
+country = "Syria"
+rank = 10
+
+print(age > 16)   # True
+print(country == "Syria")    # True
+
+print(age > 16 and country == "Syria" and rank > 5)    # True
+print(age > 16 and country == "UAE" and rank > 5)    # False
+
+print("-------------------------------------------------")
+
+# - or
+
+print(age > 40 or country == "Germany") # False
+print(age > 40 or country == "Germany" or rank > 10) # False
+print(age > 40 or country == "Syria" or rank > 10) # True
+
+print("-------------------------------------------------")
+
+# not
+
+print(age > 16)  # True
+print(not age > 16)  # not True = False
