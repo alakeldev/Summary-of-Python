@@ -1635,3 +1635,100 @@ print("-------------------------------------------------")
 
 print(age > 16)  # True
 print(not age > 16)  # not True = False
+
+
+
+print("-------------------------------------------------")
+
+# Assignment Operators
+
+# =
+# +=
+# -= 
+# *=
+# /=
+# **=
+# %=
+# //=
+#-------------------------
+
+x = 10   # assign a value to a variable
+y = 20   # assign a value to a variable
+
+#x = x + y  
+#print(x) # 30
+#x += y 
+#print(x) # 50
+
+
+
+# x = x - y   # -10
+
+x -= y   # -10
+
+print(x)
+
+
+print("-------------------------------------------------")
+
+
+# Comparison Operators:
+
+# [ == ] Equal
+# [ != ] Not Equal
+
+
+
+print(100 == 100)  # true
+print(100 == 200)   # False
+print(100 == 100.0)   # True
+
+print("-------------------------------------------------")
+
+print(100 != 100)  # False
+print(100 != 200)  # True
+print(100 != 100.0) # False
+
+print("-------------------------------------------------")
+
+
+
+
+# [ > ] Greater Than
+# [ < ] Less than 
+
+
+print(100 > 100)  # False
+print(100 > 200)   # False
+print(100 > 100.0)   # False
+print(100 > 40)   # True
+
+print("-------------------------------------------------")
+
+print(100 < 100)  # False
+print(100 < 200)   # True
+print(100 < 100.0)   # False
+print(100 < 40)   # False
+
+print("-------------------------------------------------")
+
+# [ >= ] Greater Than Or Equal
+# [ <= ] less Than Or Equal
+
+
+print(100 >= 100)  # True
+print(100 >= 200)   # False
+print(100 >= 100.0)   # True
+print(100 >= 40)    # True
+
+
+print("-------------------------------------------------")
+
+
+print(100 <= 100)  # True
+print(100 <=200)   # True
+print(100 <= 100.0)   # True
+print(100 <= 40)   # False
+
+
+#------------------------------------------------------------------------------------------------------------
