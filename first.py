@@ -1732,3 +1732,94 @@ print(100 <= 40)   # False
 
 
 #------------------------------------------------------------------------------------------------------------
+print("-------------------------------------------------")
+
+# Type Conversion:
+
+# str()
+
+a = 10
+print(type(a)) # int
+print(type(str(a)))    # str
+
+
+print("-------------------------------------------------")
+
+# tuple()        this method it needs an element can make iteration on him (Loop on the element)
+
+c = "Alakel"   # string
+d = [1, 2, 3, 4, 5]   # list
+e = {"A", "B", "C"}  # set
+f = {"A": 1, "B": 2}  # Dictionary
+
+print(tuple(c))   # ('A', 'l', 'a', 'k', 'e', 'l')
+print(tuple(d))   # (1, 2, 3, 4, 5)
+print(tuple(e))   # ('B', 'C', 'A')
+print(tuple(f))   # ('A', 'B')
+# print(tuple(500))   # Error Object Int is not Iterable no Iteration on it
+
+
+print("-------------------------------------------------")
+
+
+# list()
+
+c = "Alakel"   # string
+d = (1, 2, 3, 4, 5)   # tuple
+e = {"A", "B", "C"}  # set
+f = {"A": 1, "B": 2}  # Dictionary
+
+
+
+print(list(c))   #['A', 'l', 'a', 'k', 'e', 'l']
+print(list(d))   # [1, 2, 3, 4, 5]
+print(list(e))   # ['A', 'C', 'B']
+print(list(f))   # ['A', 'B']
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+
+# set()
+
+
+c = "Alakel"   # string
+d = (1, 2, 3, 4, 5)   # tuple
+e = ["A", "B", "C"]  # list
+f = {"A": 1, "B": 2}  # Dictionary
+
+
+
+print(set(c))   # {'k', 'e', 'l', 'A', 'a'}
+print(set(d))   # {1, 2, 3, 4, 5}
+print(set(e))   # {'B', 'A', 'C'}
+print(set(f))   # {'B', 'A'}
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# Dict()
+
+# c = "Alakel"   # string       it cause ERROR
+# d = (1, 2, 3, 4, 5)   # tuple    it Cause ERROR to avoid the error u must make nested tuples inside the main tuple as per below
+d = (("A", 1), ("B", 2), ("C", 3))
+# e = ["A", "B", "C"]  # list  it cause Error to avoid the error u must make nested lists inside the main list as per below 
+e = [["one", 1], ["Two", 2], ["Three", 3]]
+
+# f = {{"A", 1}, {"B", 2}}  # Set Error even we follow tuple and list way because it's unhashable type so not accept to make set a dictionary
+
+
+
+# print(dict(c))   # ERROR String
+print(dict(d))   # {'A': 1, 'B': 2, 'C': 3}
+print(dict(e))   # {'one': 1, 'Two': 2, 'Three': 3}
+# print(dict(f))   # ERROR Set
+
+
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
