@@ -1907,5 +1907,28 @@ print("-------------------------------------------------")
 
 
 
+print("-------------------------------------------------")
+print("-------------------------------------------------")
 
 
+# Nested If
+
+#uName = "Abdullah"
+#student = "Yes"
+#cName = "Python"
+#cPrice = 100
+#uCountry = "Syria"
+
+
+#if uCountry == "Syria" or uCountry == "UAE" or uCountry == "Qatar":
+#    if student == "Yes":
+#        print(f"Hello {uName} You Are From {uCountry} And You Are a Student Too.")
+#        print(f"The Course '{cName}' Price Is: {cPrice - 80} $")
+#    else:
+#        print(f"Hello {uName} You Are From {uCountry}.")
+#        print(f"The Course '{cName}' Price Is: {cPrice - 60} $")
+#elif uCountry == "KSA" or uCountry == "Iraq":
+#    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 50} $")
+
+#else:
+#    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 20} $")
