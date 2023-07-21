@@ -1823,3 +1823,89 @@ print(dict(e))   # {'one': 1, 'Two': 2, 'Three': 3}
 
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# User Input
+
+#fName = input("What's Your First Name?")
+#mName = input("What's Your Middle Name?")
+#lName = input("What's Your Last Name?")
+# We use Strip method if user make spaces in his name before or after so it will remove by this method
+# we use capitalize method if use mixed letter with capital and small letter so this method will return the first letter only capitalize
+#fName = fName.strip().capitalize()
+#mName = mName.strip().capitalize()
+#lName = lName.strip().capitalize()
+
+#print(f"Hello {fName} {mName:.1s} {lName}, You Are Welcome.") # we use here :.1s for middle name to return only the first letter from the name
+
+
+
+print("-------------------------------------------------")
+
+
+
+# Practical Slice Email
+
+# email = "Abdullah_alakel@alakel.org"
+# print(email[:email.index("@")])
+
+# theName = input("What's Your Name?").strip().capitalize()
+# theEmail = input("What's Your Email?").strip()
+
+# theUsername = theEmail[:theEmail.index("@")]
+# theDomain = theEmail[theEmail.index("@") + 1 :]
+
+# print(f"Your Name Is {theName} Your Email Is {theEmail}")
+# print(f"Your Username Is {theUsername} \nYour Domain Is {theDomain}")
+
+
+print("-------------------------------------------------")
+
+
+# Practical your Age full Details:
+
+#age = int(input("What is Your Age ? ").strip())
+
+# Age in All Time Types
+
+#months = age * 12
+#weeks = months * 4
+#days = age * 365
+#hours = days * 24
+#minutes = hours * 60
+#seconds = minutes * 60
+
+#print("You Lived Alomst: ")
+#print(f"{months} Months.")
+#print(f"{weeks} Weeks.")
+#print(f"{days:,} Days.")
+#print(f"{hours:,} Hours.")
+#print(f"{minutes:,} Minutes.")
+#print(f"{seconds:,} Seconds.")
+
+
+print("-------------------------------------------------")
+
+# Control Flow If , Elif, Else    (Make Decisions)   Example to understand it
+
+
+#uName = "Abdullah"
+#cName = "Python"
+#cPrice = 100
+#uCountry = "KSA"
+
+#if uCountry == "Syria":
+#    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 80} $")
+
+#elif uCountry == "UAE":
+#    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 50} $")
+
+#elif uCountry == "KSA":
+#    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 40} $")
+
+#else:
+#    print(f"Hello {uName} You Are From {uCountry} . \nThe Course '{cName}' Price Is: {cPrice - 30} $")
+
+
+
+
+
