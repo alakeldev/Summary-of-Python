@@ -2107,3 +2107,60 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------
+
+# While  Loop:             the code inside it, will run till the condition change to false
+# Syntax
+
+
+# While Conidition_Is_True
+# Code Will Run
+
+
+# a = 0
+# while a < 15:
+
+#     print(a)
+#     a += 1
+
+# print("Loop Finished")
+
+
+## here it will not run the code inside while becuase it's already false and while not run if it's false
+#while False :
+#    print("Will not print")
+
+
+
+# Training on While Loop:
+
+#myFriends = ["Alakel", "Abdullah","Almama", "Sami", "Maher", "Fatin", "Elfie", "Layan"]
+
+
+# print(len(myFriends))    # List Length
+
+# without the loop
+print(myFriends[0])
+print(myFriends[1])
+print(myFriends[2])
+print(myFriends[3])
+print(myFriends[4])
+print(myFriends[5])
+print(myFriends[6])
+print(myFriends[7])
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# With while loop
+# zfill() method we use it to put a 0 number before the number 1 as we put its value as 1 characters
+# str() method to change it to string to we can use zfull method on it 
+a = 0 
+while a < len(myFriends) :
+    print(f"#{str(a + 1).zfill(2)} {myFriends[a]}")
+    a += 1
+
+else:
+    print("All Friends Printed.")
+
+
+
