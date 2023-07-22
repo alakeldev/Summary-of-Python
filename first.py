@@ -1932,3 +1932,119 @@ print("-------------------------------------------------")
 
 #else:
 #    print(f"Hello {uName} You Are From {uCountry}. \nThe Course '{cName}' Price Is: {cPrice - 20} $")
+
+
+print("-------------------------------------------------")
+
+
+# Ternary Conditional operator:
+
+#country = "Syria"
+
+#if country == "Syria": print(f"The Weather in {country} is 15")
+#elif country == "UAE": print(f"The Weather in {country} is 30")
+#else: print("Country Is Not Available")
+
+print("-------------------------------------------------")
+
+
+# Short If:
+
+#showRate = 18
+#age = 16
+
+#if age < showRate :
+#    print("The Show Is not for Your Age")
+#else :
+#   print("The Show Is for Your age and enjoy it")
+
+
+
+#Syntax:
+
+# Condition if true | if condition | else | condition if false
+#print("The Show Is not for Your Age" if age < showRate else "The Show Is for Your age and enjoy it")
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# Practical Your Age Full Details 
+#print("#" * 80)
+#print(" You can write the first letter only from type unit ".center(80,"#"))
+#print("#" * 80)
+
+#age = input("Enter Your Age Here: ").strip()
+
+#unitTime = input("Please Choose Time Unit: Months, Weeks, Days \n").strip().lower()
+
+
+#months = int(age) * 12
+#weeks = months * 4
+#days = int(age) * 365
+
+#if unitTime == "months" or unitTime == "m":
+#    print("Months Choosed")
+#    print(f"You Lived For {months:,} Months. ")
+#elif unitTime == "weeks" or unitTime == "w":
+#    print("Your Choosed Weeks")
+#    print(f"Your Lived For {weeks:,} Weeks. ")
+#elif unitTime == "days" or unitTime == "d":
+#    print("You Choosed Days")
+#    print(f"Your Lived For {days:,} Days. ")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# Membership Operators:
+# In
+# Not In
+
+# - String
+name = "Alakel"
+print("a" in name)   # True
+print("A" in name)   # True
+print("K" in name)   # False
+
+print("-------------------------------------------------")
+
+# - List
+
+friends = ["Alakel", "Abdullah", "Samir"]
+
+print("Alakel" in friends)  # True
+print("SASA" in friends)   # False
+
+print("Abdullah" not in friends)  # False
+print("SASA" not in friends) # True
+
+
+print("-------------------------------------------------")
+
+# Using in and not in with conditions:
+
+countriesOne = ["Syria", "UAE", "KSA", "Kuwait"]
+countriesDisc1 = 80
+countriesTwo = ["USA", "Germany"]
+countriesDisc2 = 50
+
+myCountry = "USA"
+
+if myCountry in countriesOne:
+    print(f"Hello You have a Discount: ${countriesDisc1}")
+
+elif myCountry in countriesTwo:
+    print(f"Hello You have a Discount: ${countriesDisc2}")
+
+else: 
+    print("Sorry You Have No Discount")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------
