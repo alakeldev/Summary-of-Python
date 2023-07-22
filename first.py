@@ -2208,3 +2208,35 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+
+# loop while Advanced Example:    Simple Password Guess:
+
+#myTries = 4
+
+#myPassword = "123456@"
+
+#inputPassword = input("Please Write Your Password: ")
+
+#while inputPassword != myPassword :
+
+#    myTries -= 1
+
+#    print(f"Wrong Password Try Again please, Remain { 'last' if myTries == 0 else myTries } Tries")
+
+#    inputPassword = input("Please Write Your Password: ")
+
+#    if myTries == 0:
+
+#        print("You Finished All Password Tries")
+
+#        break
+
+#else:
+#    print("Correct Password")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
