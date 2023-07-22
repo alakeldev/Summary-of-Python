@@ -2048,3 +2048,62 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------
+
+
+# Practical Membership Control Example,,,,Advanced Example:
+
+# Names list that can access the app:
+
+#members = ["Alakel", "Abdullah"]
+
+#login
+
+#name = input("Enter Your Name: ").strip().capitalize()
+
+
+
+#if name in members :
+
+#    print(f"Welcome {name}, Happy To See Your Again")
+
+#    option = input("Delete or Update your Name: ").strip().capitalize()
+
+#    if option == "Update":
+#        theNewName = input("Write Your New Name: ").strip().capitalize()
+#        members[members.index(name)] = theNewName
+
+#        print("Name Updated Without Issues! =) ")
+#        print(members)
+
+
+#    elif option == "Delete":
+#        members.remove(name)
+#        print("The Name Deleted Without Issues! =)")
+
+#       print(members)
+
+#    else:
+
+#        print("Your Choose Wrong Option, please choose between delete and update")
+
+#else:
+
+#    message = input("You are Not From the members, You Want to Add Your Self: Y, N ?").strip().capitalize()
+
+#    if message == "Y" or message == "Yes":
+
+#        print("Added Successfully")
+
+#        members.append(name)
+
+#        print(members)
+
+#    else:
+
+#        print("You Are Not Added To our Members")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------
