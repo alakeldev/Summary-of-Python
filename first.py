@@ -2152,7 +2152,7 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 
 # With while loop
-# zfill() method we use it to put a 0 number before the number 1 as we put its value as 1 characters
+# zfill() method we use it to put a 0 number before the number 1 as we put its value as 2 characters
 # str() method to change it to string to we can use zfull method on it 
 a = 0 
 while a < len(myFriends) :
