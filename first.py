@@ -2163,4 +2163,48 @@ else:
     print("All Friends Printed.")
 
 
+print("-------------------------------------------------")
+print("-------------------------------------------------")
 
+
+
+
+# Simple Bookmark Manage     While Training   Advanced Important
+
+#myFavouriteWebsites = []
+
+#maxWebsites = 5
+
+#while maxWebsites > 0 :
+
+#    website = input("Please Enter Your Website: ")
+
+#   myFavouriteWebsites.append(f"https://{website.strip().lower()}")
+
+#    maxWebsites -= 1
+
+#    print(f"Website Added, still pending {maxWebsites}")
+
+#    print(myFavouriteWebsites)
+
+#else:
+#    print("BookMarks Is Full, Sorry You Cannot Add More!")
+
+
+#if len(myFavouriteWebsites) > 0 :
+    
+#    myFavouriteWebsites.sort()
+
+#    index = 0
+
+#    print("Printing the BookMarks")
+
+#    while index < len(myFavouriteWebsites) :
+        
+#        print(myFavouriteWebsites[index])
+
+#        index += 1
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
