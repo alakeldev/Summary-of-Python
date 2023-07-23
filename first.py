@@ -2365,3 +2365,32 @@ for employer in employers:
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# Break, Continue, Pass
+
+#myNumbers = [1, 2, 3, 4, 5, 6, 10, 15 , 17 ,19]
+
+#for number in myNumbers :
+    #Continue
+
+    #if number == 10:     ## it will stop current iteration/loop and continue after it 
+    #    continue
+
+
+    #Break
+
+    #if number == 10:     ## it will exit/break the iteration/loop
+        
+    #    break
+
+    #Pass
+
+    #if number == 10:
+
+    #    pass  # main purpose is when you are testing the code and at somepoint u want to skio/pass the empty if conditions or any code u want
+
+    # print(number)
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
