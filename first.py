@@ -2311,3 +2311,57 @@ for skill in mySkills:
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+# For Loop   (Nested loop)
+
+people = ["Alakel", "Abdullah", "Khaled", "Mama", "MiMi"]
+
+skills = ["HTML", "CSS", "Js"]
+
+for name in people :    # Outer Loop
+
+    print(f"{name} Skills Is: ")
+
+    for skill in skills:     # Inner Loop
+        print(f"# {skill}")
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# Simple Example to UnderStand Important for Nested For Loop:
+
+employers = {
+    "Alakel": {
+        "html": "70%",
+        "css": "40%",
+        "JS": "50%"
+
+    },
+    "Abdullah": {
+            "HTML": "10%",
+        "css": "20%",
+        "JS": "30%"
+    },
+    "Akel": {
+            "html": "90%",
+        "css": "70%",
+        "Js": "100%"
+    }
+    
+}
+
+for employer in employers:     
+    print(f"Skills and Progress for {employer} is: ")      ##employer will return the key of the main dictionary
+
+    for skill in employers[employer] :    ## employers[employer] will return the keys of the nested dictionary
+        print(f"# {skill.upper()}: {employers[employer][skill]}")  # employers[employer][skill] will return the values of nested dictionary
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
