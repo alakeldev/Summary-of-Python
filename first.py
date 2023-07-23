@@ -2605,3 +2605,24 @@ show_detail("Abdullah", "HTML","CSS","JS","Python")
 # HTML
 # CSS
 # JS
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+# Default Parameters (in Function)
+
+def say_hi(name, age = "UnKnown", country = "UnKnown") :
+    print(f"Hello {name} Your Age is {age} and You Are From: {country}")
+
+
+say_hi("Alakel", 25, "Syria")
+say_hi("Abdullah", 25, "Germany")
+say_hi("Khaled",)   # Error becuase we only put two arguments and its required three arguements for this function
+# to fix this issue we put default value for Parameters, you can set the default values for the last parameters or to all
+
+# you can set default values to all parameters without any issue.
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
