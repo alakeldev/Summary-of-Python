@@ -2394,3 +2394,54 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# Advanced Dictionary Loop:
+
+myNewSkills = {
+    "HTML": "80%",
+    "Css": "70%",
+    "python": "50%",
+    "Js": "60%"
+}
+
+# First Way to get the result and get loop on keys and values of the dictionary:
+
+#print(myNewSkills.items())
+
+#for skill in myNewSkills:
+#    print(f"{skill} => {myNewSkills[skill]}")
+
+
+
+
+# the Second Way to get the result and get loop on keys and values of the dictionary:
+
+#for skillKey, skillValue in myNewSkills.items():
+#    print(f"{skillKey} => {skillValue}")
+
+
+
+
+# Advanced Example:   Important to UnderStand Nested Loop with important notes to understand
+
+myUltimateSkills = {
+    "HTML": {
+        "Main": "80%",
+        "Pugjs": "70%"
+    },
+    "CSS": {
+        "Main": "90%",
+        "Sass": "50%"
+    }
+}
+
+
+for main_key, main_value in myUltimateSkills.items() :
+    print(f"{main_key} Progress Is: ")
+    for child_dic_key, child_dic_value in main_value.items() :
+        print(f"{child_dic_key}  #{child_dic_value}")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
