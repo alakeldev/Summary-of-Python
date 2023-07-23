@@ -2240,3 +2240,74 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# Loop : For
+
+#syntax:
+# for item in iterable_object :
+    # block of code
+
+myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for number in myNumbers :
+
+    #print(number * 10)
+
+    if number % 2 == 0 :   # even,
+        print(f"The Number {number} is Even")
+    
+    else :
+        print(f"The Number {number} is Odd.")
+
+else:   # it's not same else of while, the else inside for it's only refer that the loop finished 
+
+    print("The Loop finished")
+
+print("-------------------------------------------------")
+
+#Another Example on string (loop)
+
+myName = "Alakel"
+
+for letter in myName:
+    print(f"[ {letter.upper()} ]")
+
+
+print("-------------------------------------------------")
+
+
+
+
+# For Loop Training:
+
+#myRange = range(1, 100)       # range() built in function that generate for a bunch of numbers that you put the range between 1, 100
+
+#for number in myRange:
+#    print(number)
+
+# Dictionary
+
+mySkills = {
+    "HTML": "90%",
+    "CSS": "70%",
+    "JS": "60%",
+    "Python": "80%",
+    "React": "90%"
+}
+
+#print(mySkills["JS"])
+#print(mySkills.get("Python"))
+
+
+for skill in mySkills:
+    #print(skill)    # print only keys
+
+    print(f"My Progress In IT {skill} is: {mySkills[skill]}")     # this way to print the values of the keys 
+    print(f"My Progress In IT {skill} is: {mySkills.get(skill)}")  # this way to print the values of the keys 
+    print("-------------------------------------------------")
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
