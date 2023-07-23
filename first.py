@@ -2445,3 +2445,38 @@ for main_key, main_value in myUltimateSkills.items() :
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+# Function and Returns:   the Most Important Section:
+# 1- Function is a reusable block of code to do a task
+# 2- Function Run When You Call it
+# 3- Function Accept Elements to Deal with Called [Parameters]
+# 4- Function Can Do Specific task without return Data
+# 5- Function Can Return Data after run Finished
+# 6- Function Create to Prevent DRY    Don't Repeat Your Self
+# 7- Function accenpt elements when you call it [Arguments]
+# 8- There is a Built-in Functions and user defined Functions
+# 9- Function is for All team and all Apps
+
+
+def function_name():
+
+    print("Hello World From Inside Function")
+
+
+function_name()    # Here you call the function
+
+
+print("-------------------------------------------------")
+
+
+def function_name_Two():
+    
+    return "Hello World From Inside Function Two"
+
+
+function_name_Two()    # Here you call the function but it will not show anything on terminal
+
+print(function_name_Two()) # here You Call the function and you print it because inside the function it's return a value not print it
+
+print("-------------------------------------------------")
