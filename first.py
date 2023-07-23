@@ -2480,3 +2480,65 @@ function_name_Two()    # Here you call the function but it will not show anythin
 print(function_name_Two()) # here You Call the function and you print it because inside the function it's return a value not print it
 
 print("-------------------------------------------------")
+
+#------------------------------------------------------------------------------------------------------------
+
+## Function Parameters and Arguments:
+
+# a, b, c = "Alakel", "Abdullah", "Khaled"
+
+#print(f"Hello {a}")
+#print(f"Hello {b}")
+#print(f"Hello {c}")
+
+# def => Function KeyWord [Define]
+# say_hello => Function name
+# name => Parameter
+# print(f"Hello {name}")  => the Task inside Function
+# say_hello(a)  => the a when we call the function it's a Argument
+
+
+# def say_hello(name) :
+#     print(f"Hello {name}")
+
+
+# say_hello(a)    # Alakel
+# say_hello(b)    # Abdullah
+# say_hello(c)    # Khaled
+
+print("-------------------------------------------------")
+
+# Another Example:
+
+def addition(num1, num2) :
+    
+    if type(num1) == int and type(num2) == int :
+
+        print(num1 + num2)
+
+    else:
+
+        print("Please Enter Only Integers")
+
+addition("100", "10.3")    # 150
+addition(50, 50)     # 100
+
+
+
+print("-------------------------------------------------")
+
+
+
+# Another Example
+
+def full_name(fName, mName, lName) :     # Parameters
+    print(f"{fName.strip().capitalize()} {mName.upper():.1s} {lName.strip().capitalize()}")
+
+
+
+full_name("Abdullah  ", "Khaled", "Alakel    ")     # Arguments
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
