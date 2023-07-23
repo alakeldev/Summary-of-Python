@@ -2593,6 +2593,7 @@ show_detail("HTML","CSS","JS")
 
 
 def show_detail(name, *skills) :
+        print(type(skills))      # the type of *skills is Tuple
         print(f"Hello {name} You have these Skills: ")
         for skill in skills :
             print(skill)
@@ -2622,6 +2623,35 @@ say_hi("Khaled",)   # Error becuase we only put two arguments and its required t
 # to fix this issue we put default value for Parameters, you can set the default values for the last parameters or to all
 
 # you can set default values to all parameters without any issue.
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# Function Packing, unpacking arguments:    **KWArgs
+
+def show_skills(**skills) :   #when you put two **, here you say that when you call the function and put arguemnts, it must be Dictionary
+
+
+    print(type(skills))    # Dictionary
+
+    for skill, value in skills.items() :
+        print(f"{skill} => {value}")
+
+
+
+show_skills(HTML = "80%", CSS = "50%", JS = "80%")   # you must put here Dictionary Type
+
+myPrivetSkills = {
+    "HTML": "80%",
+    "Go": "50%",
+    "Python": "70%"
+}
+
+#show_skills(myPrivetSkills)   # Error You cannot add the dictionary direct here you must first unpack it then you can add it (key:Value)
+
+show_skills(**myPrivetSkills)
 
 print("-------------------------------------------------")
 print("-------------------------------------------------")
