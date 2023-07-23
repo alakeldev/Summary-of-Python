@@ -2542,3 +2542,66 @@ full_name("Abdullah  ", "Khaled", "Alakel    ")     # Arguments
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+# Function Packing, unpacking Arguments:   *args
+
+# print(1, 2, 3, 4)
+
+# myList = [1, 2, 3, 4, 5, 6, 7]
+
+# print(myList)    # [1, 2, 3, 4, 5, 6, 7]
+# print(*myList)    # 1 2 3 4 5 6 7
+
+
+#def say_hello(name1, name2, name3, name4) :
+#    myFriends = [name1, name2, name3, name4]
+
+#   for friend in myFriends :
+#        print(f"Hello {friend}")
+
+
+#say_hello("Alakel","Abdullah","Khaled", "Abdu","Alaa") # here will cause an error because the arguments are 5 and parameters are only 4
+
+# to fix the problem that sometimes we cannot know the exact number of arguments that we gonna use so we can use as per below :
+
+# def say_hello(*names) :      # here you can add the number of arugments when you call the function what ever the number is no problem
+#     for name in names:
+#         print(f"Hello {name}")
+
+
+
+# say_hello("Alakel","Abdullah","Khaled","Sonic","Alnasser")
+
+
+
+
+
+# Another Example:
+
+def show_detail(*skills) :
+    for skill in skills:
+        print(f"Hello Alakel You have Skill of: {skill}")
+
+
+
+show_detail("HTML","CSS","JS")
+# Hello Alakel You have Skill of: HTML
+# Hello Alakel You have Skill of: CSS
+# Hello Alakel You have Skill of: JS
+
+
+
+def show_detail(name, *skills) :
+        print(f"Hello {name} You have these Skills: ")
+        for skill in skills :
+            print(skill)
+
+
+
+show_detail("Abdullah", "HTML","CSS","JS","Python")
+
+# Hello Abdullah You have these Skills:
+# HTML
+# CSS
+# JS
