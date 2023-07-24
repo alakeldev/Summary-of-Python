@@ -2688,3 +2688,90 @@ print("-------------------------------------------------")
 
 
 # Function Scope
+
+# Global Scope
+# Local Scope 
+
+# If you want to make a variable inside function global scope as per below:
+
+x = 3
+
+def one():
+
+    global x
+
+    x = 2
+
+    print(x)
+
+print(x)  #3
+
+one()   #2
+
+print(x)    #2
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# Function Recursion:    function call self inside itself
+
+#Example to understand
+
+def cleanWord (word):
+
+    if len(word) == 1 :
+        return word
+
+    if word[0] == word[1] :
+
+        print(f"print from condition {word}")
+        return cleanWord(word[1:])
+    
+    print(f"print {word}")
+    return word[0] + cleanWord(word[1:])
+
+print(cleanWord("AAAAALLLLLLAAAAAAKKKKKKKEEEEEEELLLLL"))    # ALAKEL
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+# Function Lambda  , Anonymous Function
+
+# 1- It has No Name
+# 2- You can Call it Inline Without Defining it
+# 3- You can use it in return Data From Another Function
+# 4- Lambda used For Simple Functions and Def Handle the Larg Tasks
+# 5- Lambda is one Single Expression not block of Code
+# 6- Lambda type is FUNCTION 
+
+# Normal Function
+def say_hello(name, age):
+
+    return f"Hello {name} your age is {age}"
+
+
+print(say_hello("Alakel", 25))
+
+# Lambda Function
+
+hello = lambda name, age : f"Hello {name} your age is {age}"
+
+print(hello("Abdullah", 26))
+
+# if you want to know the function name, there is a way as per below:
+
+print(say_hello.__name__)    # say_hello
+print(hello.__name__)   # Lambda
+
+
+print(type(hello))   # function
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
