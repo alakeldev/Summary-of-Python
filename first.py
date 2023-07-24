@@ -2775,3 +2775,30 @@ print(type(hello))   # function
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# File Hanlding:
+
+# "a" Appened     open file for appending values, create file if not exists
+# "r" Read        [Default Value] open file for read and give error if files is not exists
+# "w" Write       Open File for Writing, Create File if not Exists
+# "x" Create      Create File, Give Error if file exists
+
+#import os    # Module os (operating system)
+
+#print(os.getcwd())   # The Main Current Working Directory
+
+# print(os.path.abspath(os.path.dirname(__file__)))   # Directroy For the Opened File
+
+
+# change Current Working Directory:
+
+#os.chdir(os.path.abspath(os.path.dirname(__file__)))
+
+#print(os.getcwd()) 
+#print(os.path.dirname(__file__))
+
+# file = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\alakel.txt") # the r before " is meaning that it's string don't take programming orders from it
+
+#open method it needs two things ("File Name or File path, the mode that u want") r is default value
+
+
