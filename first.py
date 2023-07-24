@@ -2656,3 +2656,35 @@ show_skills(**myPrivetSkills)
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# Advanced Trainings
+
+myTuple = ("HTML", "CSS", "Python")
+
+mySkills = {
+    "HTML": "80%",
+    "Go": "50%",
+    "Python": "70%",
+    "SQL": "50%"
+}
+def show_skills(name, *skills, **skillsWithProgress):
+    print(f"Hello {name}: \nSkills Without Progress are:")
+
+    for skill in skills:
+        print(f"- {skill}")
+
+    print("Skill With Progress are: ")
+
+    for skillkey, skillvalue in skillsWithProgress.items() :
+        print(f"{skillkey} => {skillvalue}")
+
+show_skills("Alakel",*myTuple, **mySkills)
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# Function Scope
