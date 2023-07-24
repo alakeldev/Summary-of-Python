@@ -2783,22 +2783,126 @@ print("-------------------------------------------------")
 # "w" Write       Open File for Writing, Create File if not Exists
 # "x" Create      Create File, Give Error if file exists
 
-#import os    # Module os (operating system)
+# import os    # Module os (operating system)
 
-#print(os.getcwd())   # The Main Current Working Directory
+# print(os.getcwd())   # The Main Current Working Directory
 
 # print(os.path.abspath(os.path.dirname(__file__)))   # Directroy For the Opened File
 
 
 # change Current Working Directory:
 
-#os.chdir(os.path.abspath(os.path.dirname(__file__)))
+# os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
-#print(os.getcwd()) 
-#print(os.path.dirname(__file__))
+# print(os.getcwd()) 
+# print(os.path.dirname(__file__))
 
 # file = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\alakel.txt") # the r before " is meaning that it's string don't take programming orders from it
 
-#open method it needs two things ("File Name or File path, the mode that u want") r is default value
+# open method it needs two things ("File Name or File path, the mode that u want") r is default value
 
+
+########## file reading
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\alakel.txt", "r")
+
+# print(myFile)    # File Data Object  (name, mode, encoding)
+# print(myFile.name)   # C:\Users\Abode\Desktop\python\the-summary-of-python\alakel.txt
+# print(myFile.mode)    # r
+# print(myFile.encoding)  # cp1252
+
+
+# print(myFile.read())   # read() accept the number of characters that you want to read if not write it, the default value is -1 = read all data
+# print(myFile.read(5))   # "Hello" only read 5 characters
+
+# print(myFile.readline()) # Hello Alakel    it will read the line only 
+# print(myFile.readline(10))  # How Are Yo
+
+# print(myFile.readlines())  # it return as a list
+# print(myFile.readlines(50))  # it return as a list  we put the number of characters that we want
+# print(type(myFile.readlines()))   # list
+
+
+#for line in myFile:
+
+#    print(line)
+
+#    if line.startswith("05"):
+#        break
+
+# myFile.close()    # don't forget to close the file after finish the edit on it 
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# Write and Append in File
+
+# myNewfile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\alakel.txt", "w")  ## write mode it will create the file if not exist
+
+# myNewfile.write("Hello From Python File With power\n")
+# myNewfile.write("Hello From Python File With love\n")
+# myNewfile.write("Hello From Python File With Happy")
+
+# it will remove the old content of the file, then it will write that i mentioned in my previose code it will remove the old content
+
+
+# myfile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\fun.txt","w")
+# myfile.write("Alakel Python Summries\n" * 500)
+
+
+
+# writelines()    it needs list to work
+
+# myList = ["Alakel\n", "Abode\n", "Abdullah"]
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt", "w")
+# myFile.writelines(myList)
+
+
+#### Append  the append will not over write on the old file content, it will add on it only without removing it from the file or write on it
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt", "a")
+# myFile.write("\nHello World! \n")
+# myFile.write("My Line")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# File Handling - Important Info
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt", "a")  # inside it it has "Hello From Python"
+
+# myFile.truncate(5)   # to cut a chapter from the strings inside the file, truncate() method it needs the number of characters 
+
+# it will return only word "Hello"
+
+
+
+#------------------------
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt", "a") # inside the file we wrote only "Hello"
+# print(myFile.tell())  # it will return only 5, this function tell that position of cursor that will start to write if we start to append
+
+# after we make new line by press on enter button and save the line and run the method tell() again it return number 7
+# it means that from number 5 jump to number 7 because of the newline,,,, in windows the newline Equal to two characters as \n or \r
+
+
+
+#-------------
+
+# myFile = open(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt", "r")# the file content is "Hello From Python With Love"
+# myFile.seek(6)     # set the location that you want the cursor start from to count and take
+
+# print(myFile.read())   # it will return "From Python With Love" without Hello 
+
+
+#--------------
+
+# to remove file from its location
+
+# import os
+# os.remove(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt")   # it will remove the file after import the os
 
