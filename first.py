@@ -2906,3 +2906,71 @@ print("-------------------------------------------------")
 # import os
 # os.remove(r"C:\Users\Abode\Desktop\python\the-summary-of-python\abdullah.txt")   # it will remove the file after import the os
 
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# Built in Functions:
+
+# all()
+# any()
+# bin()
+# id()
+
+
+# all()  built in function explain as per below example:
+
+x = [1, 2, 3, 4]
+
+if all(x):
+    print("All Elements are True")
+
+# here all() is function will check on the list element if all are true if will print "All Elements are True"
+
+else:
+
+    print("There is at least one element false")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# any()  built in function explain as per below example:
+
+x = [0, 0, 1, []]
+
+if any(x):
+
+    print("There is one element or more true but minimum one element to write this sentence ")
+
+else:
+
+    print("All the elements are False(No True Elements)")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# bin()   built in function, it returns the Binary Code that computer and machine understand it
+
+print(bin(100))   # 0b1100100
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# id() the id of the variable inside the computer memory that it's unique, it is related to this variable inside the memory cannot be dublicate
+# you can know this id thorugh using the built in function id()
+
+a = 1
+b = 2
+
+print(id(a))  # 140735829304104
+print(id(b))  # 140735829304136
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
