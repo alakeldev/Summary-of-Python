@@ -3110,7 +3110,7 @@ friendsNames = ["  ALakel    ", "Abdullah", "  WaFAa     "]
 formatedNames = map(formatName, friendsNames)
 
 
-# print(formatedNames)
+# print(formatedNames)   # here it will give the id number of the map object inside the computer memory 
 
 for personName in formatedNames:
     print(personName)
@@ -3138,6 +3138,121 @@ for personName in formatedNames:
 # - Alakel -
 # - Abdullah -
 # - Wafaa -
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# Filter()    it always return only the true
+
+# 1- Filter Take A Function + Iterator 
+# 2- Filter Run A Function on Every Element
+# 3- The Function Can be Pre-Defined Function Or Lambda Function
+# 4- Filter Out All Elements For Which the Function Return True
+# 5- The Function Need To Return Boolean Value
+
+#Example:
+
+def checkNumbers(num):
+    if num > 10 :
+        return num
+    
+
+myNumbers = [0, 1, 20, 60, 58 , 6,]
+
+myResult = filter(checkNumbers, myNumbers)
+
+# print(myResult) # here it will give the filter object id number inside the computer memory
+
+for n in myResult:
+    print(n)
+
+# 20
+# 60
+# 58
+
+# it return all the numbers is bigger than 10
+
+print("-------------------------------------------------")
+
+# Example to understand the filter that only return the true
+
+def checkNumbers(num):
+    if num == 0 :
+        return True   # must be put here True to return 0 because filter only return true values and the 0 value is false so must put True
+    
+
+myNumbers = [0, 0, 0, 1, 20, 60, 58 , 6, 0, 0]
+
+myResult = filter(checkNumbers, myNumbers)
+
+# print(myResult) # here it will give the filter object id number inside the computer memory
+
+for n in myResult:
+    print(n)
+
+# 0
+# 0
+# 0
+# 0
+# 0
+
+print("-------------------------------------------------")
+
+# another example to more understand filter() function and how to use it:
+
+def checkNumbers(num):
+    return  num > 10  # no need to use condition you can write it direct in return to check the true and filter will return the true elements
+    
+
+myNumbers = [0, 1, 20, 60, 58 , 6,]
+
+myResult = filter(checkNumbers, myNumbers)
+
+# print(myResult) # here it will give the filter object id number inside the computer memory
+
+for n in myResult:
+    print(n)
+
+# 20
+# 60
+# 58
+
+
+print("-------------------------------------------------")
+
+
+# Another Example For Filter() Function
+
+def checkName(name):
+
+    return name.startswith("A")
+
+myNames = ["Alakel", "Abdullah", "SDOSO", "Wafaa", "Amr"]
+
+myResult = filter(checkName, myNames)
+
+for name in myResult:
+    print(name)
+
+
+# Alakel
+# Abdullah
+# Amr
+
+print("-------------------------------------------------")
+
+# Example using filter Function For Lambda Function:
+
+myNames = ["Alakel", "Abdullah", "SDOSO", "Wafaa", "Amr", "Wael"]
+
+myResult = filter(lambda name : name.startswith("W"), myNames)
+
+for n in myResult:
+    print(n)
+
+#Wafaa
+#Wael
 
 print("-------------------------------------------------")
 print("-------------------------------------------------")
