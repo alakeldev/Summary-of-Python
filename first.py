@@ -3256,3 +3256,47 @@ for n in myResult:
 
 print("-------------------------------------------------")
 print("-------------------------------------------------")
+
+
+
+
+
+# reduce()   higher order Function so it will transfer to function tool Module
+
+# 1- Reduce Take A function + iterator
+# 2- Reduce Run A function on First and Second Element and give Result
+# 3- Then Run Function On Result and third Element
+# 4- Then Run Function on Result and Fourth Element and So On......
+# 5- Till one element is left and this is the result of the reduce
+# 6- The Function Can be pre-Defined Function Or Lambda Function
+
+# Example: 
+
+from functools import reduce
+
+def sumAll(num1, num2):
+
+    return num1 + num2
+
+
+numbers = [1, 6, 8, 100, 33]
+
+result = reduce(sumAll, numbers)
+
+print(result)   # 148   ((((1 + 6) + 8 ) + 100)+ 33)  = 148
+
+
+
+# Lambda Function With Reduce():
+
+from functools import reduce
+
+numbers = [1, 6, 8, 100, 33]
+
+result = reduce(lambda n1, n2 : n1 + n2, numbers)
+
+print(result)   # 148    ((((1 + 6) + 8 ) + 100)+ 33)  = 148
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
