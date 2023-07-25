@@ -2974,3 +2974,118 @@ print(id(b))  # 140735829304136
 
 print("-------------------------------------------------")
 print("-------------------------------------------------")
+
+
+# sum(iterable, start)   calculate inside the iterable and give the final result
+
+a = [1, 10, 20, 60]
+
+print(sum(a))   # 91
+
+print(sum(a, 10))   # 101
+
+
+# round(number, number of digits)    it will make round of the number
+
+
+print(round(150.299)) # 150
+print(round(150.500)) # 150
+print(round(150.501)) # 151
+print(round(150.551, 2)) # 150.55
+print(round(150.555, 2)) # 150.56
+print(round(150.554, 2)) # 150.55
+print(round(150.554, 3)) # 150.554
+
+
+# range(start, end, step)    
+
+print(list(range(0)))  # it means the end is 0 the default value of start is 0 and the stop default value is 1
+# the result of above is [] because it's start from 0 and end to 0 so it's []
+
+print(list(range(10)))   # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] not including the end 
+print(list(range(0, 20, 2)))   # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] not including the end 
+
+
+# print()
+
+#print("Hello Alakel")
+#print("Hello","Alakel")   # default value between two msgs is one space
+#print("Alakel","How","Are","You", sep = "|")   # here we change the default seprator between msgs from empty space to |
+#print("Alakel","How","Are","You", sep = "@")   # here we change the default seprator between msgs from empty space to @
+#print("Alakel","How","Are","You", sep = " @ ")   # here we change the default seprator between msgs from empty space to empty space @ empty space
+
+
+# whey when we run print function then another print function so the result coming in new line, the answer is because of end.
+# the end default value inside the print function is \n it means that new line or start in new line example below to understand:
+print("Fist Line", end = "\n")   # end = "\n" default value
+print("Second Line", end = "\n")
+print("-------------------------------------------------")
+
+print("Third Line", end = " Here The End ")
+print("Fourth Line")  # here in this print meaning the end = "\n" so it will start on the new line any print after it
+print("Fifth Line")
+# output is:
+#"Third Line Here The End Fourth Line"
+#"Fifth Line"
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+# abs()   absolute value of the number that you gonna give it (absolute value is:  the Distance between your number and 0)
+
+print(abs(1000))  # 1000
+print(abs(-1000))  # 1000
+print(abs(10.66))  # 10.66
+print(abs(-10.66))  # 10.66
+
+print("-------------------------------------------------")
+
+
+# pow(base, exponent, modulues)    power it's and exponent **
+
+print(pow(2, 10)) # 1024
+print(pow(2, 4)) # 16
+print(pow(2, 4, 10)) # 6    (2 * 2 * 2 * 2 % 10)
+print(pow(2, 5, 10)) # 2    (2 * 2 * 2 * 2 * 2 % 10)
+
+
+print("-------------------------------------------------")
+
+
+# min(item,item,item,item) or min(Iterator"Loop")    Minimum() it means to get the minimum element that you have inside the function    
+
+print(min(1, 10, 20, -60, 30, 90))  # -60
+print(min("Alakel", "Abdullah","SASA", "FaFA"))   # Abdullah
+print(min("A", "L", "M", "Alakel"))   # A
+print(min((1, 20, 30, -60, -100, 90)))   # -100
+
+print("-------------------------------------------------")
+
+
+# max(item,item,item,item) or max(Iterator"Loop")    Maximum() it means to get the maximum element that you have inside the function    
+
+print(max(1, 10, 20, -60, 30, 90))  # 90
+print(max("Alakel", "Abdullah","SASA", "FaFA"))   # SASA
+print(max("A", "L", "M", "Alakel"))   # M
+print(max((1, 20, 30, -60, -100, 90)))   # 90
+
+print("-------------------------------------------------")
+
+
+# slice(start, end, step)   you can store it inside object and you can use it inside ur application later
+
+# normal without using the slice function:
+a = ["A", "B", "C", "D", "E", "F"]
+print(a[:])   # ['A', 'B', 'C', 'D', 'E', 'F']
+print(a[:5])   # ['A', 'B', 'C', 'D', 'E'] not including the end
+
+# with using slice function 
+print(a[slice(5)]) # the number 5 it means that he gonna stop in index number 5    # ['A', 'B', 'C', 'D', 'E']  not including the end
+print(a[slice(2, 5)]) # the number 5 it means that he gonna stop in index number 5    # ['C', 'D', 'E']  not including the end
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
