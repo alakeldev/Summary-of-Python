@@ -3300,3 +3300,73 @@ print(result)   # 148    ((((1 + 6) + 8 ) + 100)+ 33)  = 148
 
 print("-------------------------------------------------")
 print("-------------------------------------------------")
+
+# below we have three built in functions:
+# enumerate()
+# help()
+# reversed()
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# enumerate(iterable, start = 0)   it will add counter to the iterable when you are in the loop
+
+# Example:
+
+mySkills = ["HTML", "CSS", "Java", "PHP"]
+
+mySkillsWithCounter = enumerate(mySkills, 10)
+
+
+for c, s in mySkillsWithCounter :   # because of enumerate function you can loop on two element one is the counter and one is skill
+    print(f"{c} - {s}")
+
+# 10 - HTML
+# 11 - CSS
+# 12 - Java
+# 13 - PHP
+
+# if you want to check the type of data mySkillsWithCounter:
+#print(type(mySkillsWithCounter))    # <class 'enumerate'>
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# help() if you want to know details about any function  
+
+#print(help(print))
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# reversed()   it will reverse the iterable 
+
+myString = "Alakel"
+
+print(reversed(myString))   # <reversed object at 0x000001496D4DF9A0>
+
+for letter in reversed(myString):   # you want to loop on it to see the reverse on the iterable
+    print(letter)
+# l
+# e
+# k
+# a
+# l
+# A
+
+for skill in reversed(mySkills):
+    print(skill)
+
+# PHP
+# Java
+# CSS
+# HTML
+
+# you can make it list then you can loop on it with add list() and you can store it inside variable to use it later in app
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
