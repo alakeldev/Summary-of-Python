@@ -3089,3 +3089,55 @@ print(a[slice(2, 5)]) # the number 5 it means that he gonna stop in index number
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 
+
+
+# Map  Built In Function (Important)
+
+# 1- Map Take A Fucntion + Iterator
+# 2- Make Called Map Becasue it mape the function on every element
+# 3- The Function Can Be pre-Defined Function or Lambda Function
+
+
+# user Map With pre-Defined Function:
+
+def formatName(name):
+
+    return f"- {name.strip().capitalize()} -"
+
+friendsNames = ["  ALakel    ", "Abdullah", "  WaFAa     "]
+
+
+formatedNames = map(formatName, friendsNames)
+
+
+# print(formatedNames)
+
+for personName in formatedNames:
+    print(personName)
+# - Alakel -
+# - Abdullah -
+# - Wafaa -
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+
+# Use Map with Lambda Function: 
+
+
+friendsNames = ["  ALakel    ", "Abdullah", "  WaFAa     "]
+
+formatedNames = map( lambda name : f"- {name.strip().capitalize()} -", friendsNames)
+
+for personName in formatedNames:
+    print(personName)
+
+
+# - Alakel -
+# - Abdullah -
+# - Wafaa -
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
