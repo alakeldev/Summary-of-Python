@@ -3396,11 +3396,63 @@ print("-------------------------------------------------")
 
 # import one or two functions from module, you don't want to import the full module:
 
-from random import randint , random # made import for two functions(randint, random) from the random module
+# from random import randint , random # made import for two functions(randint, random) from the random module
 # print(f"Print Random Integer: {randint(100, 500)}")  # here it will generate number between 100 and 500 integer number
 # print(f"Print Float random number: {random()}")   # here it will generate random float number
 
 
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+# Modules => Create Your Module 
+
+# You Must Create Your Module Example Here, I Create my Module with file name alakel.py
+
+# You may need to import sys Module because: it will give the paths system for python and 
+# search for the module that you want to make import for it even if you want to import a specific module in the run time too
+# import sys
+# sys.path.append(r"D:\project")  # here if you want to add path in the run time and this path that has your module that you want to add
+# print(sys.path)
+
+# import alakel   # import my module
+
+# # print(dir(alakel))   # here you can see the functions inside your module 
+
+# alakel.sayHello("Abdullah")
+# alakel.sayHello("Sarah")
+
+# alakel.sayHowAreU("Maya")
+# alakel.sayHowAreU("Layan")
 
 
+print("-------------------------------------------------")
+print("-------------------------------------------------")
 
+
+# import alakel as aa   # import my module as aa: as aa mean you want to give a short name or nickname or alias to your module to use it
+
+
+# aa.sayHello("Abdullah")
+# aa.sayHello("Sarah")
+
+# aa.sayHowAreU("Maya")
+# aa.sayHowAreU("Layan")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# from alakel import sayHello  ## here we import only one function from our module 
+# sayHello("Abdullah")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# from alakel import sayHowAreU as hru   # here we import one function from module and we give it a alias name (nickname)
+# # hru("Abode")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
