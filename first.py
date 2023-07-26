@@ -3498,3 +3498,72 @@ print(termcolor.colored(pyfiglet.figlet_format("Alakel"), color="blue"))  # used
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+## Date and Time => Introduction
+
+# date and time it's a module inside python
+
+import datetime
+
+#print(dir(datetime))  to know all the info inside datetime module
+#print(dir(datetime.datetime)) to know the method inside datetime method name = datetime
+
+# print the current date and time:
+
+print(datetime.datetime.now())   # 2023-07-26 23:44:17.936864     the exact time and date
+
+print(datetime.datetime.now().year)   # 2023
+print(datetime.datetime.now().month)   #  7
+print(datetime.datetime.now().day)    # 26
+
+
+# print start and end of date:
+print(datetime.datetime.min)   # 0001-01-01 00:00:00
+print(datetime.datetime.max)   # 9999-12-31 23:59:59.999999
+
+
+# print(dir(datetime.datetime.now())) ## to know all inside of now(), one of the important inside it is time()
+
+# print the current time:
+
+
+print(datetime.datetime.now().time())   #23:48:35.038357
+# the current time each one:
+print(datetime.datetime.now().time().hour)   # 23    hour
+print(datetime.datetime.now().time().minute)   # 49   minutes
+print(datetime.datetime.now().time().second)    # 6    seconds 
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+# print start and end of time:
+
+print(datetime.time.min)   # 00:00:00
+print(datetime.time.max)   # 23:59:59.999999
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# if i want to print specific date:
+
+print(datetime.datetime(1995, 6, 21))    # 1995-06-21 00:00:00    but the year, month, day are required to proceed with function and time optional
+print(datetime.datetime(1995, 6 ,21, 10, 45, 55, 155))   # 1995-06-21 10:45:55.000155
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# Small Example to collect how many days that i lived:
+
+birthDay = datetime.datetime(1995, 6, 21)
+dateNow = datetime.datetime.now()
+
+
+print(f"My Birthday is {birthDay} and", end=" ")
+print(f"Date Now Is {dateNow}")
+
+
+print(f"I Lived For {(dateNow - birthDay).days} Days.")   # to return only the days how many days i lived till now
