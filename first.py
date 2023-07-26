@@ -3370,3 +3370,37 @@ for skill in reversed(mySkills):
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+
+######### Modules => Build in Modules
+
+# 1- Module is a File Contains a set of Functions 
+# 2- You can Import Module in your App to Help You
+# 3- You Can import Multiple Modules
+# 4- You Can Create Your own Modules
+# 5- Modules Saves Your Time
+
+
+# Import Main Module
+
+# import random    # here you import the full module with all the functions inside it
+
+# print(random) after import you can print it to know the location of the module on your computer
+# print(f"Print Randome Float Number {random.random()}") # it will generate random float number
+
+
+# show all functions inside module:
+# print(dir(random)) # here to know all the functions inside the module
+
+
+# import one or two functions from module, you don't want to import the full module:
+
+from random import randint , random # made import for two functions(randint, random) from the random module
+# print(f"Print Random Integer: {randint(100, 500)}")  # here it will generate number between 100 and 500 integer number
+# print(f"Print Float random number: {random()}")   # here it will generate random float number
+
+
+
+
+
