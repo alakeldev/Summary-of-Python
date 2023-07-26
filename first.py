@@ -3456,3 +3456,45 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+### Modules => Install External Packages
+
+# 1- Module VS Package
+# Module: Single file has functions to work with in your project
+# Package: is multiple modules and files related to this package
+
+# 2- External Packages Downloaded From The Internet.
+# 3- You Can Install Packages with Python Package Manager PIP
+# 4- PIP install the package and its dependencies(another packages or things that based and related to that package that you want to install)
+# 5- Modules List "https://docs.python.org/3/py-modindex.html"  (Modules Built in with python language if you want to read documantation)
+# 6- Packages and Modules Directory "https://pypi.org/"  (for the External Packages to search and take what you want)
+# 7- PIP Manual "https://pip.pypa.io/en/stable/cli/pip_install/"
+
+##### you must install pip python package manager
+
+## inside terminal you can write below:
+# to know which pip version you have in you system:  pip --version
+# to know all the packages that you already have:    pip list
+# to install specific package through:     pip install packageName example:   pip install termcolor
+# also you can write module name:  pip install module name  or  pip install pyfiglet >= 1.0.4  (Here to install this version or more new)
+# to upgrade any package or module that you have or even the pip:   pip install pip --upgrade  if error: pip install --user pip --upgrade
+
+
+import termcolor    # import the termcolor
+import pyfiglet     # import the pyfiglet
+
+print(dir(pyfiglet))  # to know all the function inside the pyfiglet package
+
+print(pyfiglet.figlet_format("Alakel"))    # with asci art
+print(pyfiglet.figlet_format("Abode"))      # with asci art 
+
+print(termcolor.colored("Alakel", color="blue"))   # change the color of the word
+
+print(termcolor.colored(pyfiglet.figlet_format("Alakel"), color="blue"))  # used asci art with color changed
+
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
