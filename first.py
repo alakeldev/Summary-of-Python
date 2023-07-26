@@ -3567,3 +3567,32 @@ print(f"Date Now Is {dateNow}")
 
 
 print(f"I Lived For {(dateNow - birthDay).days} Days.")   # to return only the days how many days i lived till now
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+#### how to make format for date and time:
+
+import datetime
+
+myBirthday = datetime.datetime(1995, 6, 21)
+
+print(myBirthday)  # 1995-06-21 00:00:00
+
+
+print(myBirthday.strftime("%B"))  # June
+print(myBirthday.strftime("%b"))   # Jun
+print(myBirthday.strftime("%a"))    # Wed
+print(myBirthday.strftime("%A"))    # Wednesday
+
+# to know the strftime directive you must visit https://strftime.org/  to know what you want to print exactly the day, month or even what you want
+
+print(myBirthday.strftime("%d, %B, %Y"))   # 21, June, 1995
+print(myBirthday.strftime("%d-%B-%Y"))   # 21-June-1995
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
