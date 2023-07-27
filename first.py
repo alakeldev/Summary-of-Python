@@ -3692,3 +3692,46 @@ for myWord in "Abdullah":    # for in the behind the scene make :     iter("Abdu
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+## Generators :
+
+# 1- Generator is a function with "yield" keyword instead of "return"
+# 2- It's Support iteration and return Generator iterator by calling "yield"
+# 3- Generator function can have one or more "yield"
+# 4- By using next() it resume from where it called "yield" Not from the begining
+# 5- when called, it's not start auto, it is only give you the control
+
+def myGenerator():
+
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+
+
+print(type(myGenerator()))  # 'generator'
+print(myGenerator())  # <generator object myGenerator at 0x00000207508F5430>
+
+myGenerator()   # not result will shown becuase it's not behaviour same normal function
+
+# myGen = myGenerator()
+
+# print(next(myGen))  # 1
+# print("Hey")
+# print(next(myGen))  # 2
+# print("How")
+# print(next(myGen))  # 3
+# print("SOSO")
+# print(next(myGen))  # 4
+
+
+for num in myGenerator():
+
+    print(num)
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
