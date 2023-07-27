@@ -3781,3 +3781,60 @@ sayhowareU()
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+
+# Decorators => Function With Parameters
+
+
+
+
+def myDecorator(func):   # Decorator(function as parameter)
+
+    def netsedFunc(num1, num2):    # anyname you can set (this function wrap all the decoration inside this function)
+    
+        if num1 < 0 or num1 < 0:
+
+            print("One or Two Of the Numbers is less than 0")
+
+        func(num1, num2)     # execute the function
+
+
+    return netsedFunc    # here will return all data after set the decoration too
+
+
+def myDecoratorTwo(func):
+
+    def nestedFun(num1, num2):
+
+        print("I'm Decorator Two")
+
+        func(num1, num2)
+
+
+    return nestedFun
+
+
+
+@myDecorator
+@myDecoratorTwo
+def calculate (n1, n2):
+    print(n1 + n2)
+
+
+
+calculate(10,20)
+
+calculate(5,20)   
+
+# the reason of using decorators because its increase the functionality of your function as per previous example: inside the decorator 
+# check if the number 1 or number 2 are less than 0 so it will show a message, so it add more factionality 
+
+# we can use more than one decorator before/in one function
+
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
