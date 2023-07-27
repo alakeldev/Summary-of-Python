@@ -3838,3 +3838,73 @@ calculate(5,20)
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+#Decorators Speed Test (Advanced Practical)
+
+
+def myDecorator(func):   
+
+    def netsedFunc(*numbers):    
+    
+        for num in numbers:
+
+            if num < 0:
+
+                print("One or Two Of the Numbers is less than 0")
+
+
+        func(*numbers)     
+
+
+    return netsedFunc   
+
+
+
+@myDecorator
+def calculators(n1, n2, n3, n4, n5):
+
+    print(n1 + n2 + n3 + n4 + n5)
+
+
+calculators(20, 90, 400, 582, -2)
+
+# the example above it will accepts un limited of arguments that decorator using *numbers so no limited for the numbers we can change as we want
+
+
+
+
+
+# speed test example:
+from time import time
+
+def speedTest(func):
+
+    def wrapper():
+
+        start = time()    # time is floating point number
+
+        func()
+
+        end = time()
+
+
+        print(f"Function Running Time Is: {end - start}")
+
+
+    return wrapper
+
+
+
+@speedTest      # Function Running Time Is: 2.359846353530884 the result not fixed is to check the second till the function is finished
+def bigMac():
+    for number in range(1, 20000):
+
+        print(number)
+
+bigMac()
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
