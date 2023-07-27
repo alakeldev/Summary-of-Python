@@ -3735,3 +3735,49 @@ for num in myGenerator():
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+# Decorators => Intro     in other programming languages its called meta programming 
+
+# 1- SomeTimes Called Meta Programming
+# 2- everthing in python is object even the functions 
+# 3- Decorator take a function and add some functionality and return it
+# 4- Decorator wrap other function and enhance their behaviour 
+# 5- Decorator is Higher Order Function (Function Accept Function As Parameter)
+
+
+def myDecorator(func):   # Decorator(function as parameter)
+
+    def netsedFunc():    # anyname you can set (this function wrap all the decoration inside this function)
+    
+        print("before")   # message from decorator
+
+        func()     # execute the function
+
+        print("after")   # message from decorator
+
+    return netsedFunc    # here will return all data after set the decoration too
+
+
+@myDecorator
+def sayHello():
+
+    print("Hello From SayHello Function")
+
+
+sayHello()
+
+print("-------------------------------------------------")
+
+@myDecorator
+def sayhowareU():
+    print("Hello From sayhowareU Function")
+
+
+sayhowareU()
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
