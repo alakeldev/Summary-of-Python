@@ -3630,3 +3630,65 @@ which_scope()    # 50
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+## Iterable VS Iterator:
+
+# Iterable:
+# 1- Object Contains Data that can be Interated on
+# 2- Example(String, List, Tuple, Dictionary)
+
+# Examples
+myString = "alakel"
+
+for letter in myString:
+    print(letter, end=" ")
+
+print("\n########")
+myList = [1, 2, 3, 4, 8, 10 , 9]
+
+for n in myList:
+    print(n, end =" ")
+
+
+
+#myNumber = 10
+#myNumber = 10.10
+#myNumber = False
+
+#for n in myNumber:
+#    print(n)     # Error Int Is not Iterable , Float also not , boolean Not Also
+
+print("-------------------------------------------------")
+
+# Iterator:
+
+# 1- Object Used To Iterate over iterable using next() Method Return 1 Element at A Time
+# 2- You can generate iterator from the iterable when we are using iter() method
+# 3- For loop already Calls iter() method on the iterable behind the scene
+# 4- Gives "StopIteration" if there is not next element
+
+
+#Example:
+
+myString = "Alakel"
+
+#print(next(myString))  #Error here, it will show that str object is not an iterator
+
+myIterator = iter(myString)   # to convert to iterator the you can use next method on it
+
+# next method needs iterator not an Object
+#print(next(myIterator)) #A     
+#print(next(myIterator)) #l
+#print(next(myIterator)) #a
+#print(next(myIterator)) #k
+#print(next(myIterator)) #e
+#print(next(myIterator)) #l
+#print(next(myIterator)) # StopIteration    for loop when it reach to this line it will break the loop auto
+
+
+for myWord in "Abdullah":    # for in the behind the scene make :     iter("Abdullah")  then used the next() method till each stop iteration
+    print(myWord, end=" ")                                                             # then it will break the loop
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
