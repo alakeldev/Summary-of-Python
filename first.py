@@ -3596,3 +3596,37 @@ print(myBirthday.strftime("%d-%B-%Y"))   # 21-June-1995
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+# back to scope section local and global:
+
+# the nonlocal keyword:
+
+
+# example: in the below example we have issue that the local variable 'my_age' referenced before assignment!!!!!!
+
+# def which_scope():
+#     my_age = 49 # local variable my_age
+#     def inner_scope():
+#         my_age += 1 # Issue when we try to run this line.
+#         print(my_age)
+#     inner_scope()
+
+# which_scope()
+
+
+# to fix this issue we use keyword nonlocal:
+
+def which_scope():
+    my_age = 49 # local variable my_age
+    def inner_scope():
+        nonlocal my_age # No longer an issue because of this
+        my_age += 1
+        print(my_age)
+    inner_scope()
+
+which_scope()    # 50
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
