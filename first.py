@@ -4064,3 +4064,56 @@ print("-------------------------------------------------")
 # pylint.exe then the python file path example:
 
 # pylint.exe C:\Users\Abode\Desktop\python\the-summary-of-python\first.py   (write it inside the terminal)  Your code has been rated at 4.16/10
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+# Errors and Exceptions Raising:
+
+# 1- Exceptions is a Runtime Error Reporting Machanism
+# 2- Exceptions Gives You the Message to understand The problem
+# 3- Traceback Gives You the Line To look for the code in this line
+# 4- Exceptions have many types such as: (Syntax Error, Index Error, Key Error, Etc....) https://docs.python.org/3/library/exceptions.html
+# 5- Raise Keyword used to Raise Your Own Exceptions (Very Important Thinking)
+
+# Example for make and raise Your own Exceptions:
+# Very Important to make you own Exceptions inside you application to know the problem
+
+#Example:
+
+# x = -10
+
+# if x < 0:
+    
+#     raise Exception("The Number Is less than 0")   #here it will stop all the code and show it in the terminal as mentioned inside exception
+#                                                    # Also here it will show traceback and show the exact line that issue happened in it
+#     print("This Will not print because of the Error")
+# else:
+
+#     print("x Is Positive Number")
+
+
+
+# print("This Message After If Condition")
+
+
+
+#Example:
+
+# a = "Alakel"
+
+# if type(a) != int:
+    
+#     raise ValueError("Only Numbers Allowed")  # showed traceback and the exact line of the issue
+
+
+
+# print("Print Message After Condition")  # if a is a number it will run normal and there is no value error or even exception to show and stop
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
