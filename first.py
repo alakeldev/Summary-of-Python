@@ -3967,3 +3967,51 @@ for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+## Practical => Image Manipulation with Pillow:
+
+# # how to install pillow library:
+
+# # open terminal: write:  pip install pillow
+
+
+
+# from PIL import Image
+
+# myImage = Image.open("assets/images/img1.jpg")
+
+
+# # show the image :
+# myImage.show()
+
+# # Edit the image and crop it
+
+# myCropImage = (100, 100, 800, 800)     # here the box crop diminsion needs (Left, Upper, Right, Lower)
+
+# myNewImage = myImage.crop(myCropImage)
+
+# # show the new image:
+# myNewImage.show()
+
+
+
+# # the library/package pillow if you want to make edit on images: Crop, black and white, change type of the image from type to type, roll
+# # put two or more images in one photo , change contrast of the image 
+
+
+# # the Convert Image:
+
+# myConvertImage = myImage.convert("L")
+
+# myConvertImage.show()    # here the photo changed to gray scale image Important 
+
+# # you can visit to see what you can do with this package, it is really amazing package for photos: https://pillow.readthedocs.io/en/stable/
+
+
+
+# # Picture Manipulation: Pillow Package.
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
