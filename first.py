@@ -4052,3 +4052,15 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+## Installing and Use pylint for better code: it will guide you to write clean, right , best practise, right name convenstion, style of code
+# it will guide you to follow the standards of write code
+## to install pyline: open terminal write : pip install pylint
+
+
+
+# to check the rate for your file that if follows the standard or not and what is the rate that you got, you gonna write inside terminal:
+
+# pylint.exe then the python file path example:
+
+# pylint.exe C:\Users\Abode\Desktop\python\the-summary-of-python\first.py   (write it inside the terminal)  Your code has been rated at 4.16/10
