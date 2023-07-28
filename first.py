@@ -4015,3 +4015,40 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+## Doc String and Commenting and Documenting:
+
+# 1- Documentation String for Class, Module or Function
+# 2- Can be Accessed from the help and Doc Attributes
+# 3- Made for Understanding the Complex Code
+# 4- There is one line and multiple line doc Strings
+
+
+# def alakel_function(name):
+#     ''' This Is Function To Say Hello From Alakel Function '''   # this is document for the function (Single Line Doc String)
+
+#     """ 
+#     Alakel Function
+#     It Say Hello From Inside the Function
+#     The Parameter: name => for the person that show his Fname
+
+#     return: Hello (person name) from alakel function
+
+#     """
+#     print(f"Hello {name} From Alakel Function")
+
+
+# alakel_function("Abdullah")
+
+
+# #print(dir(alakel_function))  # here to see all the attributes and info inside the function -  we use dir()
+
+# # print(alakel_function.__doc__)  ### here you can see what you write inside the doc ''' '''  single line doc
+#                                    ## Here You Can see Also for the Multiple line Doc """ """ multiple line doc
+
+# help(alakel_function)   ## Here YOu Can see what you write inside the doc ''' ''' single line doc
+#                         ## Here You Can see Also for the Multiple line Doc """ """ multiple line doc
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
