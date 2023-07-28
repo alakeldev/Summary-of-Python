@@ -3876,33 +3876,92 @@ calculators(20, 90, 400, 582, -2)
 
 
 # speed test example:
-from time import time
+# from time import time
 
-def speedTest(func):
+# def speedTest(func):
 
-    def wrapper():
+#     def wrapper():
 
-        start = time()    # time is floating point number
+#         start = time()    # time is floating point number
 
-        func()
+#         func()
 
-        end = time()
-
-
-        print(f"Function Running Time Is: {end - start}")
+#         end = time()
 
 
-    return wrapper
+#         print(f"Function Running Time Is: {end - start}")
+
+
+#     return wrapper
 
 
 
-@speedTest      # Function Running Time Is: 2.359846353530884 the result not fixed is to check the second till the function is finished
-def bigMac():
-    for number in range(1, 20000):
+# @speedTest      # Function Running Time Is: 2.359846353530884 the result not fixed is to check the second till the function is finished
+# def bigMac():
+#     for number in range(1, 20000):
 
-        print(number)
+#         print(number)
 
-bigMac()
+# bigMac()
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+## loop on many with zip()  : it is built in function that give you ability to loop on more iterable object
+
+# zip() return a zip object contains all objects
+# zip() length is the length of the lowest object that made iterable on it
+
+
+# list1 = [1, 2, 3, 4, 5]
+# list2 = ["A", "B"]
+
+
+# ultimateList = zip(list1, list2)
+
+# print(ultimateList)    # <zip object at 0x000002282FD67B80>
+
+# for item in ultimateList:
+#     print(item)
+
+
+# (1, 'A')
+# (2, 'B')
+# the output as per above why? because as i mentioed the lowest object will control the zip() function length
+
+print("-------------------------------------------------")
+
+list1 = [1, 2, 3, 4, 5]
+list2 = ["A", "B", "C", "D"]
+tuple1 = ("Man", "Woman", "Girl", "Boy")
+dict1 = {"Name": "Alakel", "Age": 25, "Country": "Syria"}
+
+
+
+for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
+    print("List 1 item =>", item1)
+    print("List 2 item =>", item2)
+    print("Tuple 1 item =>", item3)
+    print("Dict 1 item =>", item4, "Value =>", dict1[item4])
+
+
+
+# Out Put the reason that it shows three results only becasue of the length of dictionary(Dict1) only three elements so it will follow it 
+# List 1 item => 1
+# List 2 item => A
+# Tuple 1 item => Man
+# Dict 1 item => Name Value => Alakel
+# List 1 item => 2
+# List 2 item => B
+# Tuple 1 item => Woman
+# Dict 1 item => Age Value => 25
+# List 1 item => 3
+# List 2 item => C
+# Tuple 1 item => Girl
+# Dict 1 item => Country Value => Syria
 
 
 print("-------------------------------------------------")
