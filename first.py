@@ -4255,3 +4255,40 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
 
+## Debugging Code:   using breakpoint and allow it in VS-code then press run and debug then you can follow your code step by step 
+## to follow what heppened in each step with using breakpoints
+
+
+## very important stop(debugging) in complex apps to know the errors and trace it
+
+
+
+#------------------------------------------------------------------------------------------------------------
+
+
+## Type Hinting: it is only a hint and it's also different from the code documentation that we mention in previous section
+# and type of data   examples:   -> int   -> float  -> str    -> list ......
+
+
+
+def say_hello(name) -> str:     ## -> str      it's a hint but the user can enter another value but here i only hint for the developer 
+    print(f"Hello {name}")          ## what the parameter data type gonna accept  
+
+
+
+say_hello("Alakel")
+
+
+def calc(num1, num2) -> int :   ## -> int    it's a hint but user can enter any other value  (it's only hint)
+
+
+    print(num1 + num2)
+
+
+
+calc(10, 10)
+
+
+#------------------------------------------------------------------------------------------------------------
+print("-------------------------------------------------")
+print("-------------------------------------------------")
