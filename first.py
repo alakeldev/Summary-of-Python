@@ -4473,3 +4473,90 @@ print("-------------------------------------------------")
 
 
 #-------------------------------------------------------------
+
+
+# Regular Expressions => Re Module Search and FindAll
+
+# search() => Search A String for A match and return A First Match Only....please be note that it returns only the first match not all 
+# findall() => Returns A List of All Matches and Empty List if No Match
+
+# Email Pattern => [A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)
+
+
+# to use regular expression inside Python you must import the module re
+
+import re
+
+my_string = re.search(r"[A-Z]", "abdullah Alakel")
+
+print(my_string)    # <re.Match object; span=(9, 10), match='A'>
+print(dir(my_string))   # you gonna see all the info about the method and see the other methods inside it
+
+print(my_string.span())   # (9, 10)
+print(my_string.string)   # abdullah Alakel
+
+print(my_string.group())   # A
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+# another Example:
+
+my_search = re.search(r"[A-Z]{2}", "ABdullahAlakel")
+print(my_search.span())  # (0, 2)
+print(my_search.string)   # ABdullahAlakel
+print(my_search.group())    # AB
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+# Advanced Example that show it's a valid Email or Not Valid Email, Important Example to understand
+
+is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel@.com")  # Sorry!, It's Not A valid Email
+
+is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel.com") # It's a Valid Email, Thank You
+
+if is_email:
+
+    print("It's a Valid Email, Thank You")
+
+    print(is_email.span())
+    print(is_email.string)
+    print(is_email.group())
+else:
+
+    print("Sorry!, It's Not A valid Email")
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
+email_input = input("Please Write YOur Emial: ")
+
+search = re.findall(r"[A-z0-9\.]+@[A-z0-9]+\.com|net|org|info", email_input)
+
+empty_list = []
+
+if search != []:
+    
+    empty_list.append(search)
+
+    print("Email Added")
+
+
+else:
+    print("Invalid Email !!")
+
+
+for mail in empty_list:
+    print(mail)
+
+# important note: to return the full email without groups and captures you must remove () to don't make groups becauase if you put
+# the last (com|net|org|info) as group the mail will return the only this so becarful about it
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+#-------------------------------------------------------------
