@@ -4117,3 +4117,141 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 #------------------------------------------------------------------------------------------------------------
+
+
+## Exceptions Handling:
+
+# Try | Except | Else | Finally
+
+#Try => Test The Code For Errors
+#Except => Handle The Errors
+
+#Else => If No Errors 
+#Finally => Run The Code
+
+# number = int(input("Write Your Age: "))   # if the user write string (word) not integer it will return Value Error
+
+# print(number)
+
+# print(type(number))
+
+## try cannot work without except, so it's together
+# try: ### Here You Try The Code And Test The Errors
+
+#     number = int(input("Write Your Age: "))
+
+#     print("This Is Integer, from Try")
+
+# except:  ### Here It will handle And Show the Error, if it's found
+
+#     print("The User Input Not Integer")
+
+
+# else:   # if There is No Error, it will proceed with the code, you can also write inside try if you don't want to use else
+
+#     print("This Is Integer, from Else")   
+
+# finally:   ## it will proceed what ever the situation 
+
+#     print("print from finally what ever the result")
+
+
+
+# Another Example Below to Understand the logic of these words:
+
+# print(10/0)    ## Error Zero Division Error
+
+# try:
+
+#     print(10/0)
+#     print(x)
+
+# except:
+
+#     print("Cannot Divide")
+
+# the Issue Above what ever the error it will show cannot divide !!
+
+
+# again the Example with more detials
+# try:
+
+#     # print(10/0)
+#     # print(q)
+#     print(int("Hello"))
+
+# except ZeroDivisionError:    ## in the except we put the exact error that we want to show the msg below when it happened
+
+#     print("Cannot Divide")
+
+# except NameError:
+
+#     print("The Variable Not Found")
+
+
+# except ValueError:
+
+#     print("You Put Value Error")
+
+# # except:    ## here if you want to catch errors that not mentioed in the previous excepts so it will catch the other errors when they happened
+
+# #     print("General Error Happened")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
+
+## Exceptions Handling:
+### Advanced Example: we make the number of tries that wrote the file name to open it, it will reduce the count if it'S wrong name
+
+# the_file = None
+
+# the_tries = 5
+
+# while the_tries > 0:
+
+#     try:    # try to open the file
+#         print("Enter The File Name Absolute Path to Open")
+
+#         print(f"{the_tries} Tries left!")
+
+#         print(r"Example: C:\Users\Abode\Desktop\python\the-summary-of-python\yourFile.Extension")
+
+
+#         file_name_and_path = input("File Name => : ").strip()
+
+
+#         the_file = open(file_name_and_path, "r")
+
+#         print(the_file.read())
+
+#         break
+
+#     except FileNotFoundError: ## if there is an error
+
+#         print("The File Not Found Please Enter the Valid Name")
+#         the_tries -= 1
+
+#     except:
+
+#         print("Error!")
+
+
+
+#     finally:     #here anyway will proceed and run even if the file not run in try operation so we put condition in the finally:
+
+#         if the_file is not None:
+
+#             the_file.close()
+
+#             print("File Closed")
+
+# else:
+
+#     print("Sorry! All Your Tries Finished")
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+#------------------------------------------------------------------------------------------------------------
+
