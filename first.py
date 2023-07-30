@@ -4292,3 +4292,15 @@ calc(10, 10)
 #------------------------------------------------------------------------------------------------------------
 print("-------------------------------------------------")
 print("-------------------------------------------------")
+
+
+
+# Regular Expressions:  Intro  (Please use The websites below very important to check the regular expression and know all)
+
+# 1- Squesnce Of Characters That Define A search Pattern
+# 2- Regular Experssion is Not in Python It is General Concept
+# 3- Used in [Credit Card Validation, IP Address Validation, Email Validation]
+# 4- Test RegEx "https://pythex.org"
+# 5- Characters Sheet: "https://www.debuggex.com/cheatsheet/regex/python"
+
+
