@@ -4303,4 +4303,173 @@ print("-------------------------------------------------")
 # 4- Test RegEx "https://pythex.org"
 # 5- Characters Sheet: "https://www.debuggex.com/cheatsheet/regex/python"
 
+# Regular Expressions => Quantifiers   specail character that related to quantity 
 
+
+# Characters Sheet => Regular Expression Quantifiers "https://www.debuggex.com/cheatsheet/regex/python"
+
+
+
+#Example
+
+#011 5456-80
+#011 5456-33
+#011 3434-44
+#Hello
+#My Name Is Alakel
+#123456798
+
+# i want to select the phone number
+
+#\d{3}\s\d{4}-\d{3}
+
+
+# very very very important Website for regular Expression:  https://regex101.com  it will describe the regular expression that u want to use it
+# so it's very important website to use it
+
+
+#-------------------------------------------------------
+
+# Regular Expressions => Characters Classes Trainings:
+
+
+# Characters Sheet => Characters Classes "https://www.debuggex.com/cheatsheet/regex/python"
+
+# [abd]  it will search  for each letter inside these brackets so it'S important
+# [a-z] from a to z
+# [0-9] from 0 to 9
+# [a-z0-9] from a to z and from 0 to 9
+# [a-zA-Z0-9]
+# [a-m]
+# [^N] it will bring all except N
+# [^a-z] it wll bring all except from a to z small
+# [^a-z0-9] it will bring all except from a to z small and also from 0 to 9
+
+# \s[0-9]   it means bring space then number between 0 and 9
+# _[0-9] it means bring _ then number between 0 tp 9
+#_[A-Z] it means bring _ then letter between A to Z 
+#_[a-z] it means bring _ then letter between a to z
+
+
+#Example: \s[A-Z]{2}\s[0-9]{3}\s\w{,6}
+
+# Important to understand ? inside Regular Expression Quantifiers
+
+# \d{3}\s\d{4}-?\s?\d{3}     below the five lines it will bring all with this regular expression
+
+# => 012 1234 567
+# => 012 1234-567
+# 012 1234 567
+# 012 1234-567
+# 012 1234- 567
+#-------------------------------------------------------
+
+### Regular Expressions: => Assertions
+
+# ^ Start Of String
+# $ End Of String
+
+
+# ^\d{3}\s\d{4}-?\s?\d{3} 
+
+# it will bring below becasuse it starts with and no problem for what ends with
+# 012 1234 567=>
+# 012 1234-567=>
+
+
+
+
+# \d{3}\s\d{4}-?\s?\d{3}$
+
+# it will bring below becasue it ends with and no problem with what starts with:
+# =>012 1234 567
+# =>012 1234-567
+
+
+
+
+# ^\d{3}\s\d{4}-?\s?\d{3}$
+
+# it will bring below becuase it ends and starts with:
+# 012 1234 567
+# 012 1234-567
+
+
+
+#####
+# Note: # [A-z] it means [A-Za-z]
+# make Email with regular expressions
+
+#[A-z0-9\.]+@[A-z0-9]+\.[A-z]+
+
+#abdullah@gmail.com
+#aslsdada1122@gmail.org
+#dsfdsfafd_alll@hotmail.ae
+#dsfdsfafd_alll@hotmail.de
+
+
+#[A-z0-9\.]+@[A-z0-9]+\.(com|net|org)
+#abdullah@gmail.com
+#aslsdada1122@gmail.org
+
+
+# "https://regex101.com"    please use it to understand the regular expressions
+
+
+
+#-------------------------------------------------------
+
+# Regular Expresssion => Logical Or And Escaping
+
+# | or
+# \ Escape Special Characters
+# () Separate Groups
+# ----------------------------
+
+
+#Example to Understand:
+
+# (\d-|\d\)|\d>) (\w+)
+
+# 1- HTML
+# 2- CSS
+# 3- Python
+
+# 1) HTML
+# 2) CSS
+# 3) Python
+
+# 1> HTML
+# 2> CSS
+# 3> Python
+
+# ----------------------------
+
+
+# another Example:
+
+# (\d{3}) (\d{4}) (\d{3}|\(\d{3}\))
+
+
+# 012 4578 256
+# 012 4578 213
+# 011 4569 (222)
+# 011 4569 (789)
+
+# ----------------------------
+
+
+# another Example:
+
+# (https?://)(www\.)?(\w+)\.(net|org|com)
+
+# http://www.alakel.net
+# http://alakel.org
+# http://abdullahalakel.com
+
+
+
+# check the above examples on website : "https://pythex.org"   important to see the exact result
+
+
+#-------------------------------------------------------------
