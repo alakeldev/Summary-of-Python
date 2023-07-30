@@ -4485,71 +4485,71 @@ print("-------------------------------------------------")
 
 # to use regular expression inside Python you must import the module re
 
-import re
+# import re
 
-my_string = re.search(r"[A-Z]", "abdullah Alakel")
+# my_string = re.search(r"[A-Z]", "abdullah Alakel")
 
-print(my_string)    # <re.Match object; span=(9, 10), match='A'>
-print(dir(my_string))   # you gonna see all the info about the method and see the other methods inside it
+# print(my_string)    # <re.Match object; span=(9, 10), match='A'>
+# print(dir(my_string))   # you gonna see all the info about the method and see the other methods inside it
 
-print(my_string.span())   # (9, 10)
-print(my_string.string)   # abdullah Alakel
+# print(my_string.span())   # (9, 10)
+# print(my_string.string)   # abdullah Alakel
 
-print(my_string.group())   # A
+# print(my_string.group())   # A
 
-print("-------------------------------------------------")
-print("-------------------------------------------------")
-# another Example:
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
+# # another Example:
 
-my_search = re.search(r"[A-Z]{2}", "ABdullahAlakel")
-print(my_search.span())  # (0, 2)
-print(my_search.string)   # ABdullahAlakel
-print(my_search.group())    # AB
+# my_search = re.search(r"[A-Z]{2}", "ABdullahAlakel")
+# print(my_search.span())  # (0, 2)
+# print(my_search.string)   # ABdullahAlakel
+# print(my_search.group())    # AB
 
-print("-------------------------------------------------")
-print("-------------------------------------------------")
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
 
-# Advanced Example that show it's a valid Email or Not Valid Email, Important Example to understand
+# # Advanced Example that show it's a valid Email or Not Valid Email, Important Example to understand
 
-is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel@.com")  # Sorry!, It's Not A valid Email
+# is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel@.com")  # Sorry!, It's Not A valid Email
 
-is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel.com") # It's a Valid Email, Thank You
+# is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org|info)", "alakel@alakel.com") # It's a Valid Email, Thank You
 
-if is_email:
+# if is_email:
 
-    print("It's a Valid Email, Thank You")
+#     print("It's a Valid Email, Thank You")
 
-    print(is_email.span())
-    print(is_email.string)
-    print(is_email.group())
-else:
+#     print(is_email.span())
+#     print(is_email.string)
+#     print(is_email.group())
+# else:
 
-    print("Sorry!, It's Not A valid Email")
-
-
-print("-------------------------------------------------")
-print("-------------------------------------------------")
+#     print("Sorry!, It's Not A valid Email")
 
 
-email_input = input("Please Write YOur Emial: ")
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
 
-search = re.findall(r"[A-z0-9\.]+@[A-z0-9]+\.com|net|org|info", email_input)
 
-empty_list = []
+# email_input = input("Please Write YOur Emial: ")
 
-if search != []:
+# search = re.findall(r"[A-z0-9\.]+@[A-z0-9]+\.com|net|org|info", email_input)
+
+# empty_list = []
+
+# if search != []:
     
-    empty_list.append(search)
+#     empty_list.append(search)
 
-    print("Email Added")
-
-
-else:
-    print("Invalid Email !!")
+#     print("Email Added")
 
 
-for mail in empty_list:
-    print(mail)
+# else:
+#     print("Invalid Email !!")
+
+
+# for mail in empty_list:
+#     print(mail)
 
 # important note: to return the full email without groups and captures you must remove () to don't make groups becauase if you put
 # the last (com|net|org|info) as group the mail will return the only this so becarful about it
@@ -4560,3 +4560,71 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 
 #-------------------------------------------------------------
+
+# ## Regular Expressions => re Module And Sub
+
+# # split(pattern, string, Maxsplit) => return a list elements splitted on each match
+# # sub(pattern , string, replaceCount) => replace matches with what you want 
+
+
+# import re
+
+# # Split cut the string and cut it as per the match
+# string_one = "I Love Python and JavaScipt"
+
+# search_one = re.split(r"\s", string_one)   # \s means that in each space found in my string
+
+# print(search_one)    ## ["I", "Love", "Python"]
+
+
+# search_two = re.split(r"\s", string_one, 1)   # here we specify that we want only one time split then put the rest together
+
+# print(search_two) # ['I', 'Love Python and JavaScipt']
+
+# #----------------------------------------------------------------
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
+
+# string_two = "How-To_Write_A_Very-Good-Article"
+
+# search_three = re.split(r"_", string_two)
+
+# print(search_three)   # ['How-To', 'Write', 'A', 'Very-Good-Article']
+
+# search_four = re.split(r"_|-", string_two)
+
+# print(search_four)  # ['How', 'To', 'Write', 'A', 'Very', 'Good', 'Article']
+
+# print("-------------------------------------------------")
+
+# # Get Words From URL:
+
+# for counter, word in enumerate(search_four, 1):
+#     if len(word) == 1: # we put the condition here to escape the a from the result because it is only one letter so no need to see on result
+
+#         continue
+
+#     print(f"Word Number: {counter} => {word.lower()}")
+
+
+
+#output for above example is :
+# Word Number: 1 => how
+# Word Number: 2 => to
+# Word Number: 3 => write
+# Word Number: 5 => very
+# Word Number: 6 => good
+# Word Number: 7 => article    
+print("-------------------------------------------------")
+
+
+# string_one = "I Love Python and JavaScipt"
+
+# print(re.sub(r"\s", "-", string_one))   # I-Love-Python-and-JavaScipt
+
+
+# print(re.sub(r"\s", "-", string_one, 1))  # I-Love Python and JavaScipt
+
+print("-------------------------------------------------")
+#-------------------------------------------------------------
+print("-------------------------------------------------")
