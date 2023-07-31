@@ -4853,3 +4853,74 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #-------------------------------------------------------------
 print("-------------------------------------------------")
+
+# OOP => Class Attributes:
+
+# Class Attributes: Attributes Defined OutSide the Constructor
+
+
+class Member:
+
+    not_allowed_names = ["Hell", "Shit", "Fuck"]      ## Class Attribute defined outside the Constructor
+
+    users_number = 0
+
+    def __init__(self, first_name, middle_name, last_name, gender) :    # Important Note: Instance Attributes will be Inside Constructor
+
+        self.fname = first_name
+        self.mname = middle_name
+        self.lname = last_name
+        self.gender = gender
+        Member.users_number += 1
+
+    def get_full_name(self) :
+        if self.fname in Member.not_allowed_names:
+
+            raise ValueError("Name Not Allowed!")
+        
+        else:
+
+            return f"{self.fname} {self.mname} {self.lname}"
+
+
+    def name_with_title(self) :
+
+        if self.gender == "Male":
+            return f"Hello Mr {self.fname}"
+        
+        elif self.gender == "Female":
+            return f"Hello Miss {self.fname}"
+        
+        else:
+            return f"{self.fname}"
+
+
+    def get_all_info(self) :
+        
+        return f"{self.name_with_title()}, Your Full Name Is: {self.get_full_name()}"
+
+
+    def delete_user(self) :
+
+        Member.users_number -= 1
+
+        return f"User {self.fname} Deleted. "
+# print(dir(Member))   ## Here We gonna find that the methods inside instance will be appear here
+
+print(Member.users_number)   # 0
+
+member_one = Member("Abdullah", "Khaled", "Alakel", "Male")
+member_two = Member("Shit", "Samer", "Jalal", "Male")
+member_three = Member("Wifi", "Maya", "Tahseen", "Female")
+
+print(Member.users_number)    # 3
+
+
+print(member_one.get_all_info())   # Run Normal And proceed without any issues
+# print(member_two.get_all_info())   # Value Error: Name Not Allowed!!
+
+print(member_two.delete_user()) # User Shit Deleted.
+
+print(Member.users_number)   # 2
+
+#-------------------------------------------------------------
