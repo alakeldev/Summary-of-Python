@@ -4781,34 +4781,74 @@ print("-------------------------------------------------")
 # Self: Point & reffer To Instance Created From Class
 # Instance Attributes: Instance Attributes Defined Inside the Constructor
 
-# Instance Methods: Take Self Parameter Which point To Instance Created From Class
+# Important Instance Methods: Take Self Parameter Which point To Instance Created From Class
 # Instance Methods: Can Have More Than One Parameter Like Any Function
 # Instance Methods: Can Freely Access Attributes and Methods On The Same Object
 # Instance Methods: Can Access The Class Itself
 
 
-class Member:
+# class Member:
 
-    def __init__(self, first_name, middle_name, last_name) :    # Important Note: Instance Attributes will be Inside Constructor
+#     def __init__(self, first_name, middle_name, last_name, gender) :    # Important Note: Instance Attributes will be Inside Constructor
 
-        self.fname = first_name
-        self.mname = middle_name
-        self.lname = last_name
+#         self.fname = first_name
+#         self.mname = middle_name
+#         self.lname = last_name
+#         self.gender = gender
+
+
+#     def get_full_name(self) :
+
+#         return f"{self.fname} {self.mname} {self.lname}"
+
+
+#     def name_with_title(self) :
+
+#         if self.gender == "Male":
+#             return f"Hello Mr {self.fname}"
+        
+#         elif self.gender == "Female":
+#             return f"Hello Miss {self.fname}"
+        
+#         else:
+#             return f"{self.fname}"
+
+
+#     def get_all_info(self) :
+        
+#         return f"{self.name_with_title()}, Your Full Name Is: {self.get_full_name()}"
 
 
 
-member_one = Member("Abdullah", "Khaled", "Alakel")
-member_two = Member("Abode", "Samer", "Jalal")
-member_three = Member("Wifi", "Maya", "Tahseen")
+
+
+# member_one = Member("Abdullah", "Khaled", "Alakel", "Male")
+# member_two = Member("Abode", "Samer", "Jalal", "Male")
+# member_three = Member("Wifi", "Maya", "Tahseen", "Female")
 
 
 # print(dir(member_one))   # Here you Gonna See name (inside Attributes)
 
-print(member_one.fname, member_one.mname, member_one.lname)     # Abdullah Khaled Alakel
-print(member_two.fname, member_two.mname, member_two.lname)     # Abode Samer Jalal
-print(member_three.fname, member_three.mname, member_three.lname)   # Wifi Maya Tahseen
+# print(member_one.fname, member_one.mname, member_one.lname)     # Abdullah Khaled Alakel
+# print(member_two.fname, member_two.mname, member_two.lname)     # Abode Samer Jalal
+# print(member_three.fname, member_three.mname, member_three.lname)   # Wifi Maya Tahseen
 
 
+
+# print(member_one.get_full_name())   # Abdullah Khaled Alakel
+# print(member_two.get_full_name())    # Abode Samer Jalal
+# print(member_three.get_full_name())    # Wifi Maya Tahseen
+
+
+
+# print(member_one.name_with_title())    # Hello Mr Abdullah
+# print(member_three.name_with_title())    # Hello Miss Wifi
+
+
+
+
+# print(member_one.get_all_info())    # Hello Mr Abdullah, Your Full Name Is: Abdullah Khaled Alakel
+# print(member_three.get_all_info())    # Hello Miss Wifi, Your Full Name Is: Wifi Maya Tahseen
 
 print("-------------------------------------------------")
 #-------------------------------------------------------------
