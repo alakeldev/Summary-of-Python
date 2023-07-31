@@ -5023,6 +5023,10 @@ print("-------------------------------------------------")
 # print(member_one.get_full_name())   # Abdullah Khaled Alakel
 # print(Member.get_full_name(member_one))   # Abdullah Khaled Alakel
 
+# Importan: print(Member.get_full_name(member_one))  / here in the back ground called class then method then it will put the instance that
+# you create from the class
+
+
 
 # Member.say_hello()   # Hello From Static Method    (Run the static Method)
 
@@ -5031,3 +5035,82 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #-------------------------------------------------------------
 print("-------------------------------------------------")
+
+
+## OOP => Magic Methods:
+
+#1-  Everything In Python Is An Object
+#2-  __init__ Called Automatically When Instantaiting the Class
+#3-  Self.__class__ the class to which a class instance belongs
+#4-  __str__ Gives a Human-Readable output of the Object
+#5- __len__ Returns the length of the container
+#           Called when we use the built-in len() function on the object
+
+# Example:
+
+class skill:
+
+    def __init__(self):    ## define constructor here
+
+        self.skills = ["HTML", "CSS", "JS"]
+
+
+    def __str__(self):     ## __str__ Magic Method it returns Human Readable msg (Contains info about this object)
+
+        return f"This Is my Skills => {self.skills}"
+
+    def __len__(self) :
+
+        return len(self.skills)
+
+my_profile = skill()
+
+print(my_profile)   # <__main__.skill object at 0x000002109B559C50>
+
+print(len(my_profile))   # Error  object of type 'skill' has no len()  becasue you didn't use magic method __len__ inside your class
+
+# after add __len__ inside the class it return a result of   ##### 3
+
+
+my_profile.skills.append("Python")   # we add new skills to check if len will add on the len and change the old number
+my_profile.skills.append("Go")      # # we add new skills to check if len will add on the len and change the old number
+
+print(len(my_profile))   # 5         so the result change from 3 to 5 
+
+
+# print(my_profile.__class__)   # <class '__main__.skill'>  here it means that my_profile(Instance) is related to the class name skill
+
+
+
+# Another Example:
+
+# my_string = "Alakel"
+
+# print(type(my_string))   # <class 'str'>  here we can understand that it's related to the str class
+
+# print(my_string.__class__)  # <class 'str'> str is class and has methods inside it 
+
+# print(dir(str))  # it will show all methods inside class str
+
+# print(str.upper(my_string))  # ALAKEL
+
+
+# print("-------------------------------------------------")
+
+# Another Example: 
+
+# my_num = 12   # here in background.... you make instantiate for class int and you create instance under name my_num
+
+# print(type(my_num))   # <class 'int'>
+# print(my_num.__class__)  # <class 'int'>
+
+# print(dir(int))   ## here you gonna see the methods and magic methods inside int class
+# print("-------------------------------------------------")
+# print(dir(float)) # here you gonna see the methods and magic methods inside float class
+# print("-------------------------------------------------")
+# print(dir(type)) # here you gonna see the methods and magic methods inside type class
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+
+
