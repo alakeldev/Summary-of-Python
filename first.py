@@ -5117,42 +5117,117 @@ print("-------------------------------------------------")
 
 
 
-class Food:   # Base Class
+# class Food:   # Base Class
 
-    def __init__(self, name, price):
+#     def __init__(self, name, price):
         
-        self.name = name
-        self.price = price
+#         self.name = name
+#         self.price = price
 
-        print(f"{self.name} Is Created From Base Class")
+#         print(f"{self.name} Is Created From Base Class")
 
-    def eat(self):
+#     def eat(self):
 
-        print("Eat Method From Base Class")
-
-
-
-class Apple(Food):  # Apple is Derived Class and to inherit from the base class we put it Apple()
-
-    def __init__(self, name, price, amount):     # this constructor is overwrite on the main class constructor even if it's inherit
-                                        # with super() means you want take attributes from the base class 
+#         print("Eat Method From Base Class")
 
 
-        # Food.__init__(self, name)     # Create Instance from Base Class     this line is same the line below (same action will do)
-        super().__init__(name, price)  # Here if you want to inherit only one attribute super"to donot write the class name.__init__"(attribute)
 
-        self.amount = amount    # this attribute not get from base class we create it here
+# class Apple(Food):  # Apple is Derived Class and to inherit from the base class we put it Apple()
 
-        print(f"{self.name} Is Created From Derived Class and price is {self.price} and amount is {self.amount}")  
-
-    def get_from_tree(self):
-
-        print("Get From Tree From Derived Class")
+#     def __init__(self, name, price, amount):     # this constructor is overwrite on the main class constructor even if it's inherit
+#                                         # with super() means you want take attributes from the base class 
 
 
-# food_one = Food("Pizza")
-food_two = Apple("Pizza", 150, 600)    # Pizza Is Created From Derived Class and price is 150
-food_two.eat()    # Eat Method From Base Class
-food_two.get_from_tree()  # Get From Tree From Derived Class
+#         # Food.__init__(self, name)     # Create Instance from Base Class     this line is same the line below (same action will do)
+#         super().__init__(name, price)  # Here if you want to inherit only one attribute super"to donot write the class name.__init__"(attribute)
+
+#         self.amount = amount    # this attribute not get from base class we create it here
+
+#         print(f"{self.name} Is Created From Derived Class and price is {self.price} and amount is {self.amount}")  
+
+#     def get_from_tree(self):
+
+#         print("Get From Tree From Derived Class")
+
+
+# # food_one = Food("Pizza")
+# food_two = Apple("Pizza", 150, 600)    # Pizza Is Created From Derived Class and price is 150
+# food_two.eat()    # Eat Method From Base Class
+# food_two.get_from_tree()  # Get From Tree From Derived Class
+
+print("-------------------------------------------------")
+
+# OOP => Multiple Inheritance , Method overwrite, MRO : Method Resolution Order
+
+# Method Overwrite:
+
+
+# when you have two classes (base class that you inherit from it) and the derived class that take from the base class
+# so to overwrite you can write the same name function in the derived class so it will overwrite in this way
+
+
+#Multiple Inheritance:
+
+
+# class BaseOne:
+    
+#     def __init__(self):
+
+#         print("Base One")
+
+#     def fun_one(self):
+
+#         print("One")
+
+
+# class BaseTwo:
+
+#     def __init__(self):
+
+#         print("Base One")
+    
+#     def fun_two(self):
+
+#         print("two")
+
+
+# class Dervied(BaseOne, BaseTwo):
+
+
+#     pass
+
+
+# my_var = Dervied()   # Base One 
+
+# # below you can know the order and what is the order to run first and last:
+# # through method resoltion order
+# # print(Dervied.mro())   # [<class '__main__.Dervied'>, <class '__main__.BaseOne'>, <class '__main__.BaseTwo'>, <class 'object'>]
+
+
+
+
+# print(my_var.fun_one)  # <bound method BaseOne.fun_one of <__main__.Dervied object at 0x0000021A5B006790>>
+# print(my_var.fun_two)  # <bound method BaseTwo.fun_two of <__main__.Dervied object at 0x0000021A5B006790>>
+
+# my_var.fun_one()  # One
+# my_var.fun_two()  # two
+
+
+
+# class Base:
+
+#     pass
+
+
+# class DerivedOne(Base):   # the class DerivedOne Take Attributes from Class Base ( Inherit)
+
+#     pass
+
+
+# class DerivedTwo(DerivedOne): # the class DereivedTwo Take Attribute from Class DerivedOne(Inherit) and also from Base becasuse of DerivedOne
+#                                 # already inherit it's attributes from class base 
+
+#     pass
+
 
 print("-------------------------------------------------")
