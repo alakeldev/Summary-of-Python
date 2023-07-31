@@ -5101,7 +5101,7 @@ print(len(my_profile))   # 5         so the result change from 3 to 5
 
 # my_num = 12   # here in background.... you make instantiate for class int and you create instance under name my_num
 
-# print(type(my_num))   # <class 'int'>
+# print(type(my_num))      # <class 'int'>
 # print(my_num.__class__)  # <class 'int'>
 
 # print(dir(int))   ## here you gonna see the methods and magic methods inside int class
@@ -5113,4 +5113,46 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 
+## OOP => Inheritance 
 
+
+
+class Food:   # Base Class
+
+    def __init__(self, name, price):
+        
+        self.name = name
+        self.price = price
+
+        print(f"{self.name} Is Created From Base Class")
+
+    def eat(self):
+
+        print("Eat Method From Base Class")
+
+
+
+class Apple(Food):  # Apple is Derived Class and to inherit from the base class we put it Apple()
+
+    def __init__(self, name, price, amount):     # this constructor is overwrite on the main class constructor even if it's inherit
+                                        # with super() means you want take attributes from the base class 
+
+
+        # Food.__init__(self, name)     # Create Instance from Base Class     this line is same the line below (same action will do)
+        super().__init__(name, price)  # Here if you want to inherit only one attribute super"to donot write the class name.__init__"(attribute)
+
+        self.amount = amount    # this attribute not get from base class we create it here
+
+        print(f"{self.name} Is Created From Derived Class and price is {self.price} and amount is {self.amount}")  
+
+    def get_from_tree(self):
+
+        print("Get From Tree From Derived Class")
+
+
+# food_one = Food("Pizza")
+food_two = Apple("Pizza", 150, 600)    # Pizza Is Created From Derived Class and price is 150
+food_two.eat()    # Eat Method From Base Class
+food_two.get_from_tree()  # Get From Tree From Derived Class
+
+print("-------------------------------------------------")
