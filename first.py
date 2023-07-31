@@ -4628,3 +4628,68 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 #-------------------------------------------------------------
 print("-------------------------------------------------")
+
+# Regular Expressions => Group Trainings and Flags:
+
+import re
+
+#(https?) it will take the http and https
+
+#(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)     # this regular expression will match all below:
+
+#1- https://www.alakel.org:8080/catergory.php?article=105?name=how-to-do
+#2- https://www.alakel.org:category.php?article=105?name=how-to-do
+#3- https://alakel.org/category=50?article=105?name=how-to-do
+#4- http://alakel.org/category=50?article=105?name=-hpw-to-do
+#5- http://alakel.org
+#6- http://alakel.net
+
+
+# my_site = "https://www.alakel.org:8080/catergory.php?article=105?name=how-to-do"
+
+# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", my_site)
+
+# print(dir(search))   # will show all methods inside it: focus on group and groups methods
+
+
+# print(search.group())   # https://www.alakel.org:8080/catergory.php?article=105?name=how-to-do
+# print(search.groups())   # ('https', 'www', 'alakel', 'org', '8080', 'catergory.php?article=105?name=how-to-do')
+
+# for group in search.groups():
+#     print(group)
+
+# output loop
+#  https
+#  www
+#  alakel
+#  org
+#  8080
+#  catergory.php?article=105?name=how-to-do
+
+
+# print(f"protocol: {search.group(1)}")   # protocol: https
+# print(f"Sub Domain: {search.group(2)}")    # Sub Domain: www
+# print(f"Domain Name: {search.group(3)}")   # Domain Name: alakel
+# print(f"Top Level Domain: {search.group(4)}")   # Top Level Domain: org
+# print(f"Port: {search.group(5)}")    # Port: 8080
+# print(f"Query String: {search.group(6)}")   # Query String: catergory.php?article=105?name=how-to-do
+
+
+
+#### Important Note: Please Focus On "https://pythex.org" website very important
+# Inside this website there is Button name: IGNORECASE : so you can write and match without letter case sensitive
+# Inside this website there is button name: VERBOS: so You can write comment #comment so it will ignore the comments inside the regular expression
+# please be note (.) that it's match all characters except newline (\n) but with button DOTALL will match everthing with newline too
+# Multiline Button inside the website: if you write more than one line you must press multiline
+
+
+# when you want to use the above info from website inside the python language as per below:
+
+# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", my_site, re.M)   #MultiLine
+# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", my_site, re.I)   #Ignore Case
+# search = re.search(r"(https?)://(www)?\.?(\w+)\.(\w+):?(\d+)?/?(.+)", my_site, re.DOTALL)   #DOTALL 
+
+
+print("-------------------------------------------------")
+#-------------------------------------------------------------
+print("-------------------------------------------------")
