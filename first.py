@@ -4728,3 +4728,88 @@ print("-------------------------------------------------")
 # 3- Class User Can Create Many Users Object
 
 #-------------------------------------------------------------
+
+## OOP : Class Syntax and Info
+
+# 1- Class is the Blueprint or Constructor of the Object
+# 2- Class Instantiate means Create Instance Of A Class
+# 3- Instance => Object Created from Class and have Their Methods and Attributes 
+# 4- Class Defined with keyword Class
+# 5- Class Name Written with PascalCase [UpperCamelCase] Style
+# 6- Class May or May not Contains Methods and Attributes 
+# 7- When Creating Object Python look for the built in __init__ method
+# 8- __init__ method called every time you create object from class
+# 9- __init__ method is initialize the Data from the object
+# 10- Any method with two underscore in the start and end called Dunder or Magic Method
+# 11- Self Refer to the current Instance Created from the class and must be the first Parameter
+# 12- Self Parameter Can be Named Anything if you want not only self
+# 13- In Python You Don't need to call new() keyword to create object
+
+
+# Syntax:
+# class Name:
+#     Constructor => Do Instantiation [ Create Instance From A class ]
+#     Each Instance Is Separate Object
+#     def __init__(self, other_data)
+#         Body Of Function
+
+
+# Simple Example:
+
+# class Member:
+
+#     def __init__(self) :
+
+#         print("A New Member Has Been Added")
+
+
+# Member()
+# Member()
+# Member()
+
+# member_one = Member()
+# member_two = Member()
+# member_three = Member()
+
+
+# print(member_one.__class__) # class name (Member) , it will show us from which class come or reffer
+
+#-------------------------------------------------------------
+
+# OOP => Instance Attributes and Methods:
+
+# Self: Point & reffer To Instance Created From Class
+# Instance Attributes: Instance Attributes Defined Inside the Constructor
+
+# Instance Methods: Take Self Parameter Which point To Instance Created From Class
+# Instance Methods: Can Have More Than One Parameter Like Any Function
+# Instance Methods: Can Freely Access Attributes and Methods On The Same Object
+# Instance Methods: Can Access The Class Itself
+
+
+class Member:
+
+    def __init__(self, first_name, middle_name, last_name) :    # Important Note: Instance Attributes will be Inside Constructor
+
+        self.fname = first_name
+        self.mname = middle_name
+        self.lname = last_name
+
+
+
+member_one = Member("Abdullah", "Khaled", "Alakel")
+member_two = Member("Abode", "Samer", "Jalal")
+member_three = Member("Wifi", "Maya", "Tahseen")
+
+
+# print(dir(member_one))   # Here you Gonna See name (inside Attributes)
+
+print(member_one.fname, member_one.mname, member_one.lname)     # Abdullah Khaled Alakel
+print(member_two.fname, member_two.mname, member_two.lname)     # Abode Samer Jalal
+print(member_three.fname, member_three.mname, member_three.lname)   # Wifi Maya Tahseen
+
+
+
+print("-------------------------------------------------")
+#-------------------------------------------------------------
+print("-------------------------------------------------")
