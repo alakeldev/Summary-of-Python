@@ -4693,3 +4693,38 @@ import re
 print("-------------------------------------------------")
 #-------------------------------------------------------------
 print("-------------------------------------------------")
+
+print("-------------------------------------------------")
+#-------------------------------------------------------------
+print("-------------------------------------------------")
+
+# Object Oriented Programming: OOP Intro
+# 1- Python Support Object Oriented Programming
+# 2- OOP Is A Paradigm or Coding Style
+# 3- Paradigm => Means Structuring Program So the Methods[Functions] and Attributes[Data] are Bundled into Object
+# 4- Methods => Act as Function that use the information of the object
+# 5- Python Is Multi-Paradigm Programming Language [Procedural, OOP, Functional]
+# 6- Procedural => Structure App Like Recipe, Sets of steps to make the task
+# 7- Functional => Built on the Concept of Mathematical Functions 
+
+
+# Why OOP ?
+
+# OOP Allow you to Organize your code and make it readable and reusable(More Than one time use it)
+# Everything in Python is Object
+
+# If Man Is Object:
+# Attributes => Name, Age, Address, Phone Number, Info              * In JavaScript its name is (Properties = Attributes)
+# Methods [Behaviors] => Walking, Eating, Playing, Typing, Sleeping
+
+# If Cas IS Object:
+# Attributes => Model, Color, Price,
+# Methods => the cas is Stopping, the cas is going 
+
+
+# Class:
+# 1- Class Is The Template For Creating Objects [Object Constructor | Blueprint]
+# 2- Class Car Can Create Many Cars Object
+# 3- Class User Can Create Many Users Object
+
+#-------------------------------------------------------------
