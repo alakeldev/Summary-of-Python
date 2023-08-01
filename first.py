@@ -5357,23 +5357,147 @@ print("-------------------------------------------------")
 
 # Private
 
-class Member:
+# class Member:
 
-    def __init__(self, name):
-        self.__name = name    # Private property 
+#     def __init__(self, name):
+#         self.__name = name    # Private property 
 
-    def say_hello(self):
+#     def say_hello(self):
 
-        return f"Hello {self.__name}"
+#         return f"Hello {self.__name}"
 
 
-one = Member("Alakel")
-# print(one.__name)   #Error   AttributeError: 'Member' object has no attribute '__name'
-print(one.say_hello())   # Hello Alakel
+# one = Member("Alakel")
+# # print(one.__name)   #Error   AttributeError: 'Member' object has no attribute '__name'
+# print(one.say_hello())   # Hello Alakel
 
-print(one._Member__name)  # Alakel    it will print too even if private so the private it will be note for the developers that you work with
-#                                        ## not because it's a really restrected 
+# print(one._Member__name)  # Alakel    it will print too even if private so the private it will be note for the developers that you work with
+# #                                        ## not because it's a really restrected 
 
 
 print("-------------------------------------------------")
 
+### OOP => Getters and Setters
+
+# class Member:
+
+#     def __init__(self, name):
+
+#         self.__name = name    # Private
+
+#     def say_hello(self):
+
+#         return f"Hello {self.__name}"
+    
+#     def get_name(self):   ## Getter 
+
+#         return self.__name
+
+
+#     def set_name(self, new_name) :
+        
+#         self.__name = new_name
+
+# one = Member("Alakel")
+
+# print(one.get_name())   # Alakel
+
+
+# one.set_name("Abode")
+
+# print(one.get_name())   # Abode
+
+
+
+print("-------------------------------------------------")
+
+## OOP => @Property Decorator:
+
+# class Member:
+
+#     def __init__(self, name, age):
+
+#         self.name = name
+
+#         self.age = age
+
+#     def say_hello(self):
+
+#         return f"Hello {self.name}"
+    
+#     @property
+#     def age_in_days(self):    ## if you have method but without parameter only self and not action will did it's only return a result simple
+
+#         return self.age * 365    
+    
+
+
+
+# one = Member("Alakel", 25)
+
+# print(one.name)   # Alakel
+# print(one.age)    # 25
+# print(one.say_hello())   # Hello Alakel
+# # print(one.age_in_days())   # 9125  now after add @property before the method so it will return an Error TypeError: 'int' object is not callable
+
+# print(one.age_in_days)  # 9125 now it will work without any issue because it's behavior same the property not method 
+
+
+print("-------------------------------------------------")
+
+### OOP => ABCs => Abstract Base Class
+
+# Class Called Abstract Class if it has one or more Abstract Method
+# abc Module in python provides Infrastructure for defining custom Abstract Base Classes
+# BY Adding @absttractmethod Decorator on the Methods
+# ABCMeta Class Is a Metaclass Used for Defining Abstract Base Class
+
+# from abc import ABCMeta, abstractmethod
+
+
+# class Programming(metaclass=ABCMeta):
+
+#     @abstractmethod
+#     def has_oop(self):
+
+#         pass
+    
+
+#     @abstractmethod
+#     def has_name(self):
+
+#         pass
+
+# class Python(Programming):
+
+#     def has_oop(self):
+
+#         return "Yes"
+    
+#     def has_name(self):
+
+#         pass
+
+
+# class Pascal(Programming):
+
+#     def has_oop(self):
+
+#         return "No"
+    
+#     def has_name(self):
+
+#         pass
+
+
+# one = Python()
+# two = Pascal()
+
+# print(one.has_oop())  # Yes
+# print(two.has_oop())  # No
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
