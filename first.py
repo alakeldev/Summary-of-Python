@@ -5231,3 +5231,149 @@ print("-------------------------------------------------")
 
 
 print("-------------------------------------------------")
+
+
+# OOP => Polymorphism    
+
+n1 = 10
+n2 = 20
+
+print(n1 + n2)   # 30
+
+s1 = "Hello"
+s2 = "Python"
+
+print(s1 + " " + s2)   # Hello Python
+
+
+print(len([1,2,3,4,5,6]))   # 6   the number of elements inside list 
+
+print(len("Abdullah Alakel"))  #  15   characters number
+
+print(len({"Key_one": 1, "Key_two": 2}))
+
+
+# THe Idea of Polymorphism: that same method in different places make different actions
+
+
+class A:
+
+    def do_somthing(self):
+
+        print("From Class A")
+
+        raise NotImplementedError("Derived Class Must Implement this Method")
+
+
+class B(A):
+
+    def do_somthing(self):
+
+        print("From Class B")
+
+
+
+class C(A):
+
+    def do_somthing(self):
+
+        print("From Class C")
+
+
+my_instance = B()
+
+my_instance.do_somthing() 
+
+
+#### Above we gonna see method under name do_somthing in each place do somthing different because of raise Error NotImplementedError
+
+# so here we saw the polymorphism, same method name but do different actions 
+
+
+print("-------------------------------------------------")
+
+
+# OOP => Encapsulation
+
+# Encapsulation:
+
+# 1- Restrict access to the data Stored in attributes and methods 
+
+# public
+# 2- Every Attribute and Method that we used so far is public
+# 3- Attributes and methods can be modified and run from everywhere
+# 4- Inside Or OutSide the class
+
+# Protected
+# 5- Attributes and Methods Can be Accessed from within the class and sub classes that means the derived classes
+# 6- attributes and Methods prefixed with one underscore _
+# Python don't have this !!!!!!!!!!!!!!!!!!!!
+
+# Private
+# 7- Attributes and Methods Can be Accessed from within the class or Object only 
+# 8- Attributes cannot be Modified from outside the class
+# 9- Attributes and Methods Prefixed with two underscores __ 
+
+
+# Attributes = Variables = Properties   these three calls are same even in other websites information
+
+# 1- Public
+
+# class Member:
+
+#     def __init__(self, name):
+#         self.name = name    # Public 
+
+# one = Member("Alakel")
+
+# print(one.name)
+
+# one.name = "Abdullah"  you can Edit without any issue because it's public
+
+# print(one.name)
+
+
+print("-------------------------------------------------")
+
+
+# Protected , still you can call it and edit on it, so the _ before the property is only to refference for the person that it'S protected 
+
+# class Member:
+
+#     def __init__(self, name):
+#         self._name = name    # Protected 
+
+# one = Member("Alakel")
+
+# print(one._name)
+
+# one._name = "Abdullah"  
+
+# print(one._name)
+
+
+print("-------------------------------------------------")
+
+
+# Private
+
+class Member:
+
+    def __init__(self, name):
+        self.__name = name    # Private property 
+
+    def say_hello(self):
+
+        return f"Hello {self.__name}"
+
+
+one = Member("Alakel")
+# print(one.__name)   #Error   AttributeError: 'Member' object has no attribute '__name'
+print(one.say_hello())   # Hello Alakel
+
+print(one._Member__name)  # Alakel    it will print too even if private so the private it will be note for the developers that you work with
+#                                        ## not because it's a really restrected 
+
+
+print("-------------------------------------------------")
+
