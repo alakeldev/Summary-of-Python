@@ -5501,3 +5501,20 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 # print("-------------------------------------------------")
 # print("-------------------------------------------------")
+
+### Important for random module 
+import random
+
+print(f'A random float between 0 & 1.0: {random.random()}')    # A random float between 0 & 1.0: 0.6108611262269857
+print(f'A random int between 0 & 10: {random.randrange(11)}')    # A random int between 0 & 10: 1
+print('A random choice from a list: ' + random.choice(['paper', 'scissors', 'rock']))   # A random choice from a list: scissors
+deck = ['hearts', 'diamonds', 'spades', 'clubs']
+random.shuffle(deck)
+print(deck)   # ['hearts', 'spades', 'diamonds', 'clubs']
+
+
+
+print("-------------------------------------------------")
+print("-------------------------------------------------")
+# print("-------------------------------------------------")
+# print("-------------------------------------------------")
