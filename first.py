@@ -4739,7 +4739,7 @@ print("-------------------------------------------------")
 # 6- Class May or May not Contains Methods and Attributes 
 # 7- When Creating Object Python look for the built in __init__ method
 # 8- __init__ method called every time you create object from class
-# 9- __init__ method is initialize the Data from the object
+# 9- __init__ method is initialize the Data for the object
 # 10- Any method with two underscore in the start and end called Dunder or Magic Method
 # 11- Self Refer to the current Instance Created from the class and must be the first Parameter
 # 12- Self Parameter Can be Named Anything if you want not only self
@@ -4772,7 +4772,7 @@ print("-------------------------------------------------")
 # member_three = Member()
 
 
-# print(member_one.__class__) # class name (Member) , it will show us from which class come or reffer
+# print(member_one.__class__) # class name (Member) , it will show us from which class come or reffer to
 
 #-------------------------------------------------------------
 
@@ -4811,7 +4811,7 @@ print("-------------------------------------------------")
 #             return f"Hello Miss {self.fname}"
         
 #         else:
-#             return f"{self.fname}"
+#             return f"Hello {self.fname}"
 
 
 #     def get_all_info(self) :
@@ -4905,7 +4905,7 @@ print("-------------------------------------------------")
 #         Member.users_number -= 1
 
 #         return f"User {self.fname} Deleted. "
-# # print(dir(Member))   ## Here We gonna find that the methods inside instance will be appear here
+# # print(dir(Member))   ## Here We gonna find that the class attributes and the instance methods will be appear here but the instance attributes will not appear here
 
 # print(Member.users_number)   # 0
 
