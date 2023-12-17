@@ -18,11 +18,11 @@
 ## Close
 
 #Importing SQLite Module
-import sqlite3
+# import sqlite3
 
 
 # Create Database and connect
-db = sqlite3.connect("app.db")
+# db = sqlite3.connect("app.db")
 
 
 ##### Create The Tables and Fields
@@ -37,10 +37,10 @@ db = sqlite3.connect("app.db")
 # Commit => Save all changes
 
 # Setting up the cursor it's better to create the cursor and use the cursor to create the tables 
-cr = db.cursor()
+# cr = db.cursor()
 
-cr.execute("CREATE TABLE IF NOT EXISTS users (user_id INTEGER, name TEXT)")
-cr.execute("CREATE TABLE IF NOT EXISTS skills (name TEXT, progress INTEGER, user_id INTEGER)")
+# cr.execute("CREATE TABLE IF NOT EXISTS users (user_id INTEGER, name TEXT)")
+# cr.execute("CREATE TABLE IF NOT EXISTS skills (name TEXT, progress INTEGER, user_id INTEGER)")
 
 
 # Inserting Data
@@ -69,7 +69,7 @@ cr.execute("CREATE TABLE IF NOT EXISTS skills (name TEXT, progress INTEGER, user
 # fetchmany(size) => 
 
 #fetch data
-cr.execute("SELECT * FROM users")
+# cr.execute("SELECT * FROM users")
 # cr.execute("SELECT name FROM users")
 # cr.execute("SELECT user_id, name FROM users")
 
@@ -90,7 +90,68 @@ cr.execute("SELECT * FROM users")
 
 
 # Save (Commit the Changes)
-db.commit()
+# db.commit()
 
 # close db
-db.close()
+# db.close()
+
+
+###########################################################
+# Training on everything   IMPORTANT TO UNDERSTAND THIS TRAINING 
+
+import sqlite3
+
+def get_all_data():
+
+    try:
+    
+        # Connect to DB
+        db = sqlite3.connect("app.db")
+
+        print("Connected To DB Successfully")
+
+        # Setting Up the Cursor
+        cr = db.cursor()
+
+        # Fetch Data from DB
+        cr.execute("SELECT * FROM users")
+
+        # Assign Data to Variable
+        # result = cr.fetchone()
+
+        # print(type(result))  ## Tuple
+
+
+        results = cr.fetchall()
+        # print(type(results))  # List
+
+        print(results)      # [(1, 'Alakel'), (2, 'Khaled'), (3, 'Abdullah')]
+        print(results[0])   # (1, 'Alakel')
+        print(results[1])   # (2, 'Khaled')
+
+        # print number of rows
+        print(f"Database Has {len(results)} Rows.")
+
+        # printing message
+        print("Showing Data:")
+
+        # Loop in results
+        for row in results:
+            print(f"UserID => {row[0]},", end=" ")
+
+            print(f"Username => {row[1]}")
+
+    except sqlite3.Error as er:
+
+        print(f"Error Reading Data {er}")
+
+
+    finally:    ## finaly will run what ever happened so it will run at the end
+        if (db):
+            #close DB connection
+            db.close()
+
+            print("Connection to DB is closed")
+
+
+get_all_data()
