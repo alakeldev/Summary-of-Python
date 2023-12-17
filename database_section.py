@@ -99,22 +99,22 @@
 ###########################################################
 # Training on everything   IMPORTANT TO UNDERSTAND THIS TRAINING 
 
-import sqlite3
+# import sqlite3
 
-def get_all_data():
+# def get_all_data():
 
-    try:
+    # try:
     
         # Connect to DB
-        db = sqlite3.connect("app.db")
+        # db = sqlite3.connect("app.db")
 
-        print("Connected To DB Successfully")
+        # print("Connected To DB Successfully")
 
         # Setting Up the Cursor
-        cr = db.cursor()
+        # cr = db.cursor()
 
         # Fetch Data from DB
-        cr.execute("SELECT * FROM users")
+        # cr.execute("SELECT * FROM users")
 
         # Assign Data to Variable
         # result = cr.fetchone()
@@ -122,36 +122,72 @@ def get_all_data():
         # print(type(result))  ## Tuple
 
 
-        results = cr.fetchall()
+        # results = cr.fetchall()
         # print(type(results))  # List
 
-        print(results)      # [(1, 'Alakel'), (2, 'Khaled'), (3, 'Abdullah')]
-        print(results[0])   # (1, 'Alakel')
-        print(results[1])   # (2, 'Khaled')
+        # print(results)      # [(1, 'Alakel'), (2, 'Khaled'), (3, 'Abdullah')]
+        # print(results[0])   # (1, 'Alakel')
+        # print(results[1])   # (2, 'Khaled')
 
         # print number of rows
-        print(f"Database Has {len(results)} Rows.")
+        # print(f"Database Has {len(results)} Rows.")
 
         # printing message
-        print("Showing Data:")
+        # print("Showing Data:")
 
         # Loop in results
-        for row in results:
-            print(f"UserID => {row[0]},", end=" ")
+    #     for row in results:
+    #         print(f"UserID => {row[0]},", end=" ")
 
-            print(f"Username => {row[1]}")
+    #         print(f"Username => {row[1]}")
 
-    except sqlite3.Error as er:
+    # except sqlite3.Error as er:
 
-        print(f"Error Reading Data {er}")
+    #     print(f"Error Reading Data {er}")
 
 
-    finally:    ## finaly will run what ever happened so it will run at the end
-        if (db):
+    # finally:    ## finaly will run what ever happened so it will run at the end
+        # if (db):
             #close DB connection
-            db.close()
+            # db.close()
 
-            print("Connection to DB is closed")
+            # print("Connection to DB is closed")
 
 
-get_all_data()
+# get_all_data()
+
+
+###################################
+
+## Update and Delete From DB
+
+
+# import sqlite3
+
+
+# db = sqlite3.connect("app.db")
+
+# cr = db.cursor()
+
+
+## Update Data    IMPORTANT
+# cr.execute("UPDATE users SET name = 'Omar' WHERE user_id = 1")
+# cr.execute("UPDATE users SET name = 'Alakel' WHERE user_id = 2")
+
+
+# Delete Data     IMPORTANT
+# cr.execute("DELETE from users WHERE user_id = 1")
+
+# cr.execute("SELECT * FROM users")
+
+# print(cr.fetchone())
+# print(cr.fetchone())
+# print(cr.fetchone())
+
+
+# db.commit()
+
+# db.close()
+
+
+###################################
