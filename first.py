@@ -5184,7 +5184,7 @@ print("-------------------------------------------------")
 
 #     def __init__(self):
 
-#         print("Base One")
+#         print("Base Two")
     
 #     def fun_two(self):
 
@@ -5200,7 +5200,7 @@ print("-------------------------------------------------")
 # my_var = Dervied()   # Base One 
 
 # # below you can know the order and what is the order to run first and last:
-# # through method resoltion order
+# # through method resoltion order  mro()
 # # print(Dervied.mro())   # [<class '__main__.Dervied'>, <class '__main__.BaseOne'>, <class '__main__.BaseTwo'>, <class 'object'>]
 
 
@@ -5212,8 +5212,8 @@ print("-------------------------------------------------")
 # my_var.fun_one()  # One
 # my_var.fun_two()  # two
 
-
-
+#############################
+# The example below to understand the Multiple inhertiance
 # class Base:
 
 #     pass
@@ -5233,8 +5233,8 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 
 
-# OOP => Polymorphism    
-
+# OOP => Polymorphism    =====>>>> Mini forms تعدد الاوجه
+# same method do a specific action and in another place will do another action
 n1 = 10
 n2 = 20
 
@@ -5250,7 +5250,7 @@ print(len([1,2,3,4,5,6]))   # 6   the number of elements inside list
 
 print(len("Abdullah Alakel"))  #  15   characters number
 
-print(len({"Key_one": 1, "Key_two": 2}))
+print(len({"Key_one": 1, "Key_two": 2}))  # 2    number of the keys
 
 
 # THe Idea of Polymorphism: that same method in different places make different actions
@@ -5262,7 +5262,7 @@ class A:
 
         print("From Class A")
 
-        raise NotImplementedError("Derived Class Must Implement this Method")
+        raise NotImplementedError("Derived Class Must Implement this Method") # because of this raise will push the other drived classes to implement this method inside each class
 
 
 class B(A):
