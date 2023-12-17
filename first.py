@@ -5297,7 +5297,7 @@ print("-------------------------------------------------")
 
 # Encapsulation:
 
-# 1- Restrict access to the data Stored in attributes and methods 
+# 1- Restrict access to the data Stored in attributes and methods inside the class
 
 # public
 # 2- Every Attribute and Method that we used so far is public
@@ -5372,12 +5372,16 @@ print("-------------------------------------------------")
 # print(one.say_hello())   # Hello Alakel
 
 # print(one._Member__name)  # Alakel    it will print too even if private so the private it will be note for the developers that you work with
-# #                                        ## not because it's a really restrected 
+# #                                        ## it's not a really restrected as a private or protected!!
 
 
 print("-------------------------------------------------")
 
 ### OOP => Getters and Setters
+
+# Getter : will get a specific data
+# Setter: will set a specific data (new data, edit on previous data...)
+
 
 # class Member:
 
@@ -5394,7 +5398,7 @@ print("-------------------------------------------------")
 #         return self.__name
 
 
-#     def set_name(self, new_name) :
+#     def set_name(self, new_name) :  ## Setter
         
 #         self.__name = new_name
 
@@ -5412,7 +5416,7 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 
 ## OOP => @Property Decorator:
-
+# This decorator will change the function from function to a property so if you see below how you call it same the way to call the property not a function becuase we will get an error
 # class Member:
 
 #     def __init__(self, name, age):
