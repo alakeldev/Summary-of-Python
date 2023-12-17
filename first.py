@@ -5456,23 +5456,26 @@ print("-------------------------------------------------")
 # BY Adding @absttractmethod Decorator on the Methods
 # ABCMeta Class Is a Metaclass Used for Defining Abstract Base Class
 
-# from abc import ABCMeta, abstractmethod
+# لللفهم هنا لاجل عمل كلاس ابستراكت بمعنى مجرد و اضافة ابستراكت ميثودز بمعنى مجردة لاجل الاكلاسات الاخرى تلحق هذا الباترن و تلتزم بعمل هذه الميثودز بداخلها 
+# اي ان الكلاس ابستراكت يكون بمعنى ستاندرد لباقي الكلاسات و المثال التالي يوضح ذلك
+
+# from abc import ABCMeta, abstractmethod     ## must make import to use Abstract Base Classes
 
 
-# class Programming(metaclass=ABCMeta):
+# class Programming(metaclass=ABCMeta):  # with adding (metaclass=ABCMeta) so that i want this class to be abstract base class for other classes that inherit from him
 
 #     @abstractmethod
-#     def has_oop(self):
+#     def has_oop(self):       ## this method with the decorator before it tell that this method is abstract
 
 #         pass
     
 
 #     @abstractmethod
-#     def has_name(self):
+#     def has_name(self):      ## this method is abstract method
 
 #         pass
 
-# class Python(Programming):
+# class Python(Programming):     ## class python inherit from programming class and programming class is abstract base class
 
 #     def has_oop(self):
 
@@ -5483,7 +5486,7 @@ print("-------------------------------------------------")
 #         pass
 
 
-# class Pascal(Programming):
+# class Pascal(Programming):  ## class pascal inherit from programming class and programming class is abstract base class
 
 #     def has_oop(self):
 
@@ -5522,3 +5525,5 @@ print("-------------------------------------------------")
 print("-------------------------------------------------")
 # print("-------------------------------------------------")
 # print("-------------------------------------------------")
+
+# DATABASE SECTION    IMPORTANT
