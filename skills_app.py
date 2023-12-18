@@ -20,7 +20,7 @@ def commit_and_close():
     
 
 # my user ID
-uid = 2
+uid = 1
 
 
 
@@ -70,9 +70,19 @@ def show_skills():
 def add_skill():
     sk = input("Write Skill Name: ").strip().capitalize()
 
-    prog = input("Write Skill Progress: ").strip()
+    cr.execute(f"SELECT name FROM skills WHERE name = '{sk}' AND user_id = '{uid}'")
 
-    cr.execute(f"INSERT INTO skills(name, progress, user_id) VALUES('{sk}', '{prog}', '{uid}')")
+    results = cr.fetchone()
+
+    if results == None:
+        # print("Skill is not Exists inside the DB, You can add it!")
+        prog = input("Write Skill Progress: ").strip()
+
+        cr.execute(f"INSERT INTO skills(name, progress, user_id) VALUES('{sk}', '{prog}', '{uid}')")
+
+    else:
+        print("Skill Exists, You cannot add it")
+
 
     commit_and_close()
 
@@ -84,7 +94,11 @@ def delete_skill():
     commit_and_close()
 
 def update_skill():
-    print("update skill progress")
+    sk = input("Write Skill Name: ").strip().capitalize()
+
+    prog = input("Write the new Skill Progress: ").strip()
+
+    cr.execute(f"UPDATE skills SET progress = '{prog}' WHERE name = '{sk}' AND user_id = '{uid}'")
 
     commit_and_close()
 
