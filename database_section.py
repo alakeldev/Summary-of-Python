@@ -191,3 +191,40 @@
 
 
 ###################################
+
+
+## Important information about Database
+
+# Inserting data
+
+# cr.execute("INSERT INTO skills (name, progress, user_id) VALUES ('JavaScript', '65', 2)")  ## Here to insert new data to the skills table
+# cr.execute("INSERT INTO skills VALUES ('JavaScript', '65', 2)")  ## You Can write the above command shortcut
+
+
+## to prevent an SQL injection attack
+# my_tuple = ('JavaScript', '65', 1)
+# cr.execute("INSERT INTO skills VALUES (?, ?, ?)", my_tuple)   # using place holder to prevent the SQL injection
+
+
+
+
+## important information about Select and fetch the data
+# cr.execute("SELECT * FROM skills ORDER BY user_id")    ## here will order the reult by user_id
+# cr.execute("SELECT * FROM skills ORDER BY user_id asc")    ## here will order the reult by user_id ascending تصاعدي
+# cr.execute("SELECT * FROM skills ORDER BY user_id desc")    ## here will order the reult by user_id descending تنازلي
+# cr.execute("SELECT * FROM skills ORDER BY name")            ## ترتيب ابجدي 
+# cr.execute("SELECT * FROM skills ORDER BY name asc")            ##  تصاعدي ترتيب ابجدي 
+# cr.execute("SELECT * FROM skills ORDER BY name desc")            ##  تنازلي ترتيب ابجدي 
+# cr.execute("SELECT * FROM skills ORDER BY name limit 2")            ##  it will return only two results
+# cr.execute("SELECT * FROM skills ORDER BY name limit 3")            ##  it will return only Three results
+# cr.execute("SELECT * FROM skills ORDER BY name limit 3 offset 2")            ## starting from the row 3, it will shift two rows and starting from the third
+
+
+
+# cr.execute("SELECT * FROM skills WHERE user_id > 1") # Here results that user_id is bigger than 1   
+
+
+# cr.execute("SELECT * FROM skills WHERE user_id IN (1, 2, 3)") # it will return for all user_ids 1, 2 and 3
+
+# cr.execute("SELECT * FROM skills WHERE user_id NOT IN (1, 2, 3)") # it will return for all user_ids not equal 1, 2 and 3
+
